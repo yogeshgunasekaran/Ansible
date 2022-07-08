@@ -3025,3 +3025,36 @@
         "httpd is not installed"
     ]
 }
+2022-07-08 12:01:43,974 p=28049 u=vagrant n=ansible | playbook: install_httpd.yaml
+2022-07-08 12:01:49,672 p=28057 u=vagrant n=ansible | PLAY [Install httpd service for Node1 and Node2] **************************************************************************
+2022-07-08 12:01:49,687 p=28057 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-08 12:01:53,638 p=28057 u=vagrant n=ansible | ok: [Node1]
+2022-07-08 12:01:53,680 p=28057 u=vagrant n=ansible | ok: [Node2]
+2022-07-08 12:01:53,695 p=28057 u=vagrant n=ansible | TASK [update repository index] ********************************************************************************************
+2022-07-08 12:01:56,146 p=28057 u=vagrant n=ansible | ok: [Node1]
+2022-07-08 12:01:56,370 p=28057 u=vagrant n=ansible | ok: [Node2]
+2022-07-08 12:01:56,383 p=28057 u=vagrant n=ansible | TASK [Install Apache httpd] ***********************************************************************************************
+2022-07-08 12:02:03,964 p=28057 u=vagrant n=ansible | changed: [Node1]
+2022-07-08 12:02:55,636 p=28057 u=vagrant n=ansible | changed: [Node2]
+2022-07-08 12:02:55,672 p=28057 u=vagrant n=ansible | TASK [Start and Enable httpd] *********************************************************************************************
+2022-07-08 12:02:57,751 p=28057 u=vagrant n=ansible | changed: [Node1]
+2022-07-08 12:02:59,283 p=28057 u=vagrant n=ansible | changed: [Node2]
+2022-07-08 12:02:59,287 p=28057 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-08 12:02:59,287 p=28057 u=vagrant n=ansible | Node1                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:02:59,288 p=28057 u=vagrant n=ansible | Node2                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:03:36,555 p=28149 u=vagrant n=ansible | PLAY [Install httpd service for Node1 and Node2] **************************************************************************
+2022-07-08 12:03:36,571 p=28149 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-08 12:03:39,047 p=28149 u=vagrant n=ansible | ok: [Node1]
+2022-07-08 12:03:39,492 p=28149 u=vagrant n=ansible | ok: [Node2]
+2022-07-08 12:03:39,507 p=28149 u=vagrant n=ansible | TASK [update repository index] ********************************************************************************************
+2022-07-08 12:03:41,742 p=28149 u=vagrant n=ansible | ok: [Node1]
+2022-07-08 12:03:43,141 p=28149 u=vagrant n=ansible | ok: [Node2]
+2022-07-08 12:03:43,154 p=28149 u=vagrant n=ansible | TASK [Install Apache httpd] ***********************************************************************************************
+2022-07-08 12:04:00,984 p=28149 u=vagrant n=ansible | changed: [Node1]
+2022-07-08 12:04:23,313 p=28149 u=vagrant n=ansible | changed: [Node2]
+2022-07-08 12:04:23,326 p=28149 u=vagrant n=ansible | TASK [Start and Enable httpd] *********************************************************************************************
+2022-07-08 12:04:26,831 p=28149 u=vagrant n=ansible | changed: [Node1]
+2022-07-08 12:04:28,452 p=28149 u=vagrant n=ansible | changed: [Node2]
+2022-07-08 12:04:28,457 p=28149 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-08 12:04:28,458 p=28149 u=vagrant n=ansible | Node1                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:04:28,458 p=28149 u=vagrant n=ansible | Node2                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
