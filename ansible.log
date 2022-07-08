@@ -1,0 +1,7 @@
+2022-07-08 10:41:31,921 p=27519 u=vagrant n=ansible | Node1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
