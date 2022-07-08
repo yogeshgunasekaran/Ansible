@@ -3072,3 +3072,20 @@
 2022-07-08 12:17:25,915 p=28357 u=vagrant n=ansible | changed: [Node3]
 2022-07-08 12:17:25,919 p=28357 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
 2022-07-08 12:17:25,919 p=28357 u=vagrant n=ansible | Node3                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:25:58,166 p=28430 u=vagrant n=ansible | playbook: remove_httpd_mysql.yaml
+2022-07-08 12:26:35,059 p=28438 u=vagrant n=ansible | PLAY [Remove Apache httpd service on Node1 and Node2] *********************************************************************
+2022-07-08 12:26:35,078 p=28438 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-08 12:26:38,819 p=28438 u=vagrant n=ansible | ok: [Node1]
+2022-07-08 12:26:38,944 p=28438 u=vagrant n=ansible | ok: [Node2]
+2022-07-08 12:26:38,961 p=28438 u=vagrant n=ansible | TASK [Remove Apache httpd] ************************************************************************************************
+2022-07-08 12:26:44,657 p=28438 u=vagrant n=ansible | changed: [Node1]
+2022-07-08 12:26:45,493 p=28438 u=vagrant n=ansible | changed: [Node2]
+2022-07-08 12:26:45,500 p=28438 u=vagrant n=ansible | PLAY [Remove MySQL service on Node3] **************************************************************************************
+2022-07-08 12:26:45,510 p=28438 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-08 12:26:48,202 p=28438 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 12:26:48,215 p=28438 u=vagrant n=ansible | TASK [Remove MySQL service] ***********************************************************************************************
+2022-07-08 12:26:56,996 p=28438 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 12:26:56,999 p=28438 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-08 12:26:57,000 p=28438 u=vagrant n=ansible | Node1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:26:57,000 p=28438 u=vagrant n=ansible | Node2                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:26:57,001 p=28438 u=vagrant n=ansible | Node3                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

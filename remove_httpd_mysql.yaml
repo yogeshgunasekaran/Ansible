@@ -1,0 +1,20 @@
+
+---
+
+- name: Remove Apache httpd service on Node1 and Node2
+  hosts: group1
+  become: yes
+  tasks:
+    - name: Remove Apache httpd 
+      yum:
+         name: httpd
+         state: absent
+
+- name: Remove MySQL service on Node3
+  hosts: group2
+  become: yes
+  tasks:
+    - name: Remove MySQL service 
+      yum:
+         name: mariadb-server
+         state: absent
