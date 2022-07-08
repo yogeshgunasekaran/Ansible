@@ -1,0 +1,20 @@
+
+---
+- name: Install MySQL serice on Node3
+  hosts: group2
+  become: yes
+  tasks:
+    - name: update repository index
+      yum:
+        update_cache: yes
+    
+    - name: Install MySQL service
+      yum:
+        name: mariadb-server  
+        state: present
+    
+    - name: Start & Enable mariadb service
+      service:
+         name: mariadb
+         state: started
+         enabled: yes

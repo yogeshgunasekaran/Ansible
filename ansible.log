@@ -3058,3 +3058,17 @@
 2022-07-08 12:04:28,457 p=28149 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
 2022-07-08 12:04:28,458 p=28149 u=vagrant n=ansible | Node1                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-07-08 12:04:28,458 p=28149 u=vagrant n=ansible | Node2                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 12:13:56,479 p=28280 u=vagrant n=ansible | ERROR! the field 'hosts' is required but was not set
+2022-07-08 12:15:33,892 p=28340 u=vagrant n=ansible | ERROR! the field 'hosts' is required but was not set
+2022-07-08 12:16:11,338 p=28349 u=vagrant n=ansible | playbook: install_mysql.yaml
+2022-07-08 12:16:16,734 p=28357 u=vagrant n=ansible | PLAY [Install MySQL serice on Node3] **************************************************************************************
+2022-07-08 12:16:16,753 p=28357 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-08 12:16:19,333 p=28357 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 12:16:19,353 p=28357 u=vagrant n=ansible | TASK [update repository index] ********************************************************************************************
+2022-07-08 12:16:20,975 p=28357 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 12:16:20,987 p=28357 u=vagrant n=ansible | TASK [Install MySQL service] **********************************************************************************************
+2022-07-08 12:17:18,018 p=28357 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 12:17:18,034 p=28357 u=vagrant n=ansible | TASK [Start & Enable mariadb service] *************************************************************************************
+2022-07-08 12:17:25,915 p=28357 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 12:17:25,919 p=28357 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-08 12:17:25,919 p=28357 u=vagrant n=ansible | Node3                      : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
