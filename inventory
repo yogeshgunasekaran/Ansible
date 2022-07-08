@@ -1,3 +1,6 @@
-Node1 ansible_host=192.168.29.209 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible.pub
-Node2 ansible_host=192.168.29.75 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible.pub
-Node3 ansible_host=192.168.29.71 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible.pub
+#192.168.29.209
+#192.168.29.75
+#192.168.29.71
+Node1 ansible_host=192.168.29.209 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
+Node2 ansible_host=192.168.29.75 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
+Node3 ansible_host=192.168.29.71 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
