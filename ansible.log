@@ -3089,3 +3089,41 @@
 2022-07-08 12:26:57,000 p=28438 u=vagrant n=ansible | Node1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-07-08 12:26:57,000 p=28438 u=vagrant n=ansible | Node2                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-07-08 12:26:57,001 p=28438 u=vagrant n=ansible | Node3                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 17:57:04,563 p=28748 u=vagrant n=ansible | PLAY [Install MySQL serice on Node3] ************************************************************************
+2022-07-08 17:57:04,579 p=28748 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************
+2022-07-08 17:57:08,507 p=28748 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:57:08,521 p=28748 u=vagrant n=ansible | TASK [update repository index] ******************************************************************************
+2022-07-08 17:57:10,401 p=28748 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:57:10,423 p=28748 u=vagrant n=ansible | TASK [Install MySQL service] ********************************************************************************
+2022-07-08 17:57:46,095 p=28748 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 17:57:46,115 p=28748 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ***********************************************************************
+2022-07-08 17:57:55,550 p=28748 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 17:57:55,573 p=28748 u=vagrant n=ansible | TASK [Install Python MySQL dependency] **********************************************************************
+2022-07-08 17:58:27,348 p=28748 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 17:58:27,382 p=28748 u=vagrant n=ansible | TASK [Create a new database with name 'accounts'] ***********************************************************
+2022-07-08 17:58:31,358 p=28748 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 17:58:31,408 p=28748 u=vagrant n=ansible | TASK [Create database user with name 'admin'] ***************************************************************
+2022-07-08 17:58:33,260 p=28748 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2022-07-08 17:58:33,261 p=28748 u=vagrant n=ansible | changed: [Node3]
+2022-07-08 17:58:33,264 p=28748 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-08 17:58:33,264 p=28748 u=vagrant n=ansible | Node3                      : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-08 17:58:41,225 p=28826 u=vagrant n=ansible | PLAY [Install MySQL serice on Node3] ************************************************************************
+2022-07-08 17:58:41,243 p=28826 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************
+2022-07-08 17:58:44,597 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:44,622 p=28826 u=vagrant n=ansible | TASK [update repository index] ******************************************************************************
+2022-07-08 17:58:48,033 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:48,045 p=28826 u=vagrant n=ansible | TASK [Install MySQL service] ********************************************************************************
+2022-07-08 17:58:49,105 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:49,117 p=28826 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ***********************************************************************
+2022-07-08 17:58:50,491 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:50,503 p=28826 u=vagrant n=ansible | TASK [Install Python MySQL dependency] **********************************************************************
+2022-07-08 17:58:51,514 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:51,526 p=28826 u=vagrant n=ansible | TASK [Create a new database with name 'accounts'] ***********************************************************
+2022-07-08 17:58:52,414 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:52,427 p=28826 u=vagrant n=ansible | TASK [Create database user with name 'admin'] ***************************************************************
+2022-07-08 17:58:53,342 p=28826 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2022-07-08 17:58:53,342 p=28826 u=vagrant n=ansible | ok: [Node3]
+2022-07-08 17:58:53,345 p=28826 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-08 17:58:53,346 p=28826 u=vagrant n=ansible | Node3                      : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

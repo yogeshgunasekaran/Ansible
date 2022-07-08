@@ -18,3 +18,21 @@
          name: mariadb
          state: started
          enabled: yes
+
+    - name: Install Python MySQL dependency 
+      yum:
+         name: MySQL-python
+         state: present
+
+    - name: Create a new database with name 'accounts'
+      mysql_db:
+        name: accounts
+        state: present
+
+    - name: Create database user with name 'admin' 
+      mysql_user:
+        name: admin
+        password: admin123
+        priv: '*.*:ALL'
+        state: present
+
