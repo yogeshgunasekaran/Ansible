@@ -7254,3 +7254,88 @@
 2022-07-09 11:09:16,500 p=7600 u=vagrant n=ansible | Node2                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
 2022-07-09 11:09:16,501 p=7600 u=vagrant n=ansible | Node3                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
 2022-07-09 11:09:16,501 p=7600 u=vagrant n=ansible | Node4                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2022-07-09 11:56:41,583 p=8310 u=vagrant n=ansible | playbook: deploying_website.yaml
+2022-07-09 11:56:47,397 p=8318 u=vagrant n=ansible | PLAY [Install OS updates for all 4 servers] *******************************************************************************
+2022-07-09 11:56:47,420 p=8318 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 11:56:52,481 p=8318 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:56:52,578 p=8318 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:56:52,688 p=8318 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:56:53,157 p=8318 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:56:53,173 p=8318 u=vagrant n=ansible | TASK [Install updates (CentOS)] *******************************************************************************************
+2022-07-09 11:56:53,611 p=8318 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:56:55,816 p=8318 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:56:55,919 p=8318 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:56:55,920 p=8318 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:56:55,936 p=8318 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] *******************************************************************************************
+2022-07-09 11:56:56,157 p=8318 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 11:56:56,239 p=8318 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 11:56:56,285 p=8318 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 11:57:08,176 p=8318 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:57:08,185 p=8318 u=vagrant n=ansible | PLAY [Provisioning group1 as Web-Servers] *********************************************************************************
+2022-07-09 11:57:08,208 p=8318 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 11:57:10,842 p=8318 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:57:10,906 p=8318 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:57:12,015 p=8318 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:57:12,033 p=8318 u=vagrant n=ansible | TASK [Install httpd package on Node1, 2 & 4] ******************************************************************************
+2022-07-09 11:57:12,347 p=8318 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:57:13,758 p=8318 u=vagrant n=ansible | fatal: [Node2]: FAILED! => {"changed": false, "msg": "It appears that a space separated string of packages was passed in as an argument. To operate on several packages, pass a comma separated string of packages or a list of packages."}
+2022-07-09 11:57:13,773 p=8318 u=vagrant n=ansible | fatal: [Node1]: FAILED! => {"changed": false, "msg": "It appears that a space separated string of packages was passed in as an argument. To operate on several packages, pass a comma separated string of packages or a list of packages."}
+2022-07-09 11:57:13,799 p=8318 u=vagrant n=ansible | TASK [Install apache2 service on Node4 (Ubuntu)] **************************************************************************
+2022-07-09 11:58:53,445 p=8318 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 11:58:53,472 p=8318 u=vagrant n=ansible | TASK [Copy our html file from files/ to Web-Server's defaults] ************************************************************
+2022-07-09 11:58:56,720 p=8318 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 11:58:56,727 p=8318 u=vagrant n=ansible | PLAY [Provisioning group2 as db-Server] ***********************************************************************************
+2022-07-09 11:58:56,750 p=8318 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 11:58:58,889 p=8318 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:58:58,912 p=8318 u=vagrant n=ansible | TASK [Install mariadb server package in Node3 (CentOS)] *******************************************************************
+2022-07-09 11:59:00,016 p=8318 u=vagrant n=ansible | fatal: [Node3]: FAILED! => {"changed": false, "msg": "It appears that a space separated string of packages was passed in as an argument. To operate on several packages, pass a comma separated string of packages or a list of packages."}
+2022-07-09 11:59:00,018 p=8318 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-09 11:59:00,019 p=8318 u=vagrant n=ansible | Node1                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 11:59:00,019 p=8318 u=vagrant n=ansible | Node2                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 11:59:00,019 p=8318 u=vagrant n=ansible | Node3                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 11:59:00,020 p=8318 u=vagrant n=ansible | Node4                      : ok=5    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:01:24,956 p=8565 u=vagrant n=ansible | PLAY [Install OS updates for all 4 servers] *******************************************************************************
+2022-07-09 12:01:24,980 p=8565 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:01:29,586 p=8565 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:01:29,689 p=8565 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:01:29,694 p=8565 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:01:33,620 p=8565 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:01:33,635 p=8565 u=vagrant n=ansible | TASK [Install updates (CentOS)] *******************************************************************************************
+2022-07-09 12:01:34,037 p=8565 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:01:36,298 p=8565 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:01:36,372 p=8565 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:01:36,384 p=8565 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:01:36,400 p=8565 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] *******************************************************************************************
+2022-07-09 12:01:36,642 p=8565 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 12:01:36,686 p=8565 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 12:01:36,761 p=8565 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 12:01:45,593 p=8565 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:01:45,602 p=8565 u=vagrant n=ansible | PLAY [Provisioning group1 as Web-Servers] *********************************************************************************
+2022-07-09 12:01:45,624 p=8565 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:01:48,238 p=8565 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:01:48,308 p=8565 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:01:48,931 p=8565 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:01:48,954 p=8565 u=vagrant n=ansible | TASK [Install httpd package on Node1, 2 & 4] ******************************************************************************
+2022-07-09 12:01:49,249 p=8565 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:03:38,184 p=8565 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 12:03:39,704 p=8565 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 12:03:39,731 p=8565 u=vagrant n=ansible | TASK [Install apache2 service on Node4 (Ubuntu)] **************************************************************************
+2022-07-09 12:03:40,014 p=8565 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 12:03:40,056 p=8565 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 12:03:43,870 p=8565 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:03:43,885 p=8565 u=vagrant n=ansible | TASK [Copy our html file from files/ to Web-Server's defaults] ************************************************************
+2022-07-09 12:03:46,332 p=8565 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:03:48,278 p=8565 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 12:03:48,364 p=8565 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 12:03:48,377 p=8565 u=vagrant n=ansible | PLAY [Provisioning group2 as db-Server] ***********************************************************************************
+2022-07-09 12:03:48,403 p=8565 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:03:50,743 p=8565 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:03:50,763 p=8565 u=vagrant n=ansible | TASK [Install mariadb server package in Node3 (CentOS)] *******************************************************************
+2022-07-09 12:04:19,897 p=8565 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:04:19,916 p=8565 u=vagrant n=ansible | TASK [Install mariadb server] *********************************************************************************************
+2022-07-09 12:04:19,994 p=8565 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 12:04:19,997 p=8565 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-09 12:04:19,997 p=8565 u=vagrant n=ansible | Node1                      : ok=5    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:04:19,998 p=8565 u=vagrant n=ansible | Node2                      : ok=5    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:04:19,999 p=8565 u=vagrant n=ansible | Node3                      : ok=4    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:04:19,999 p=8565 u=vagrant n=ansible | Node4                      : ok=5    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   

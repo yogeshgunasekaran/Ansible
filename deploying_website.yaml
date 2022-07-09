@@ -1,0 +1,75 @@
+---
+ 
+ - name: Install OS updates for all 4 servers
+   hosts: all
+   become: true
+   pre_tasks:
+ 
+   - name: Install updates (CentOS)
+     tags: update
+     yum:
+       update_only: yes
+       update_cache: yes
+     when: ansible_distribution == "CentOS"
+ 
+   - name: Install updates (Ubuntu)
+     tags: update
+     apt:
+       upgrade: dist
+       update_cache: yes
+     when: ansible_distribution == "Ubuntu"
+ 
+ - name: Provisioning group1 as Web-Servers 
+   hosts: group1
+   become: true
+   tasks:
+ 
+   - name: Install httpd package on Node1, 2 & 4
+     tags: apache,centos,httpd
+     yum:
+       name:
+         - httpd
+         - php
+       state: latest
+     when: ansible_distribution == "CentOS"
+ 
+   - name: Install apache2 service on Node4 (Ubuntu)
+     tags: apache,apache2,ubuntu
+     apt:
+       name:
+         - apache2
+         - libapache2-mod-php
+       state: latest
+     when: ansible_distribution == "Ubuntu"
+ 
+   - name: Copy our html file from files/ to Web-Server's defaults
+     tags: apache,apache,apache2,httpd
+     copy:
+       src: our_index.html
+       dest: /var/www/html/index.html
+       owner: root
+       group: root
+       mode: 0644
+ 
+ - name: Provisioning group2 as db-Server
+   hosts: group2
+   become: true
+   tasks:
+ 
+   - name: Install mariadb server package in Node3 (CentOS)
+     tags: centos,db,mariadb
+     yum:
+       name: mariadb
+       state: latest
+     when: ansible_distribution == "CentOS"
+ 
+   - name: Install mariadb server
+     tags: db,mariadb,ubuntu
+     apt:
+       name: mariadb-server
+       state: latest
+     when: ansible_distribution == "Ubuntu"
+ 
+ 
+ 
+ 
