@@ -28,7 +28,7 @@
        name: ansible
        state: present
 
-   - name: Create a 'ansibleadmin' user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command
+   - name: Create a 'ansibleadmin' system-service-user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command
      user:
        name: ansibleadmin
        groups: ansible 
