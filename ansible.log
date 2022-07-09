@@ -3224,3 +3224,101 @@
 2022-07-09 06:47:57,292 p=3081 u=vagrant n=ansible | Node1                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-07-09 06:47:57,292 p=3081 u=vagrant n=ansible | Node2                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2022-07-09 06:47:57,293 p=3081 u=vagrant n=ansible | Node3                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:53:00,296 p=3164 u=vagrant n=ansible | playbook: print_fact_variables.yaml
+2022-07-09 06:53:04,881 p=3172 u=vagrant n=ansible | PLAY [Learning fact variables] ******************************************************************************
+2022-07-09 06:53:04,923 p=3172 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************
+2022-07-09 06:53:10,007 p=3172 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 06:53:10,177 p=3172 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 06:53:10,182 p=3172 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 06:53:10,195 p=3172 u=vagrant n=ansible | TASK [Print OS names] ***************************************************************************************
+2022-07-09 06:53:10,365 p=3172 u=vagrant n=ansible | ok: [Node1] => {
+    "ansible_distribution": "CentOS"
+}
+2022-07-09 06:53:10,418 p=3172 u=vagrant n=ansible | ok: [Node2] => {
+    "ansible_distribution": "CentOS"
+}
+2022-07-09 06:53:10,429 p=3172 u=vagrant n=ansible | ok: [Node3] => {
+    "ansible_distribution": "CentOS"
+}
+2022-07-09 06:53:10,445 p=3172 u=vagrant n=ansible | TASK [Print Memory details] *********************************************************************************
+2022-07-09 06:53:10,666 p=3172 u=vagrant n=ansible | ok: [Node1] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 291, 
+            "used": 195
+        }, 
+        "real": {
+            "free": 142, 
+            "total": 486, 
+            "used": 344
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 2047, 
+            "total": 2047, 
+            "used": 0
+        }
+    }
+}
+2022-07-09 06:53:10,667 p=3172 u=vagrant n=ansible | ok: [Node2] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 290, 
+            "used": 196
+        }, 
+        "real": {
+            "free": 142, 
+            "total": 486, 
+            "used": 344
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 2047, 
+            "total": 2047, 
+            "used": 0
+        }
+    }
+}
+2022-07-09 06:53:10,668 p=3172 u=vagrant n=ansible | ok: [Node3] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 214, 
+            "used": 272
+        }, 
+        "real": {
+            "free": 37, 
+            "total": 486, 
+            "used": 449
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 2047, 
+            "total": 2047, 
+            "used": 0
+        }
+    }
+}
+2022-07-09 06:53:10,687 p=3172 u=vagrant n=ansible | TASK [Print Real Memory details] ****************************************************************************
+2022-07-09 06:53:10,871 p=3172 u=vagrant n=ansible | ok: [Node1] => {
+    "ansible_memory_mb.real.free": "142"
+}
+2022-07-09 06:53:10,913 p=3172 u=vagrant n=ansible | ok: [Node2] => {
+    "ansible_memory_mb.real.free": "142"
+}
+2022-07-09 06:53:10,923 p=3172 u=vagrant n=ansible | ok: [Node3] => {
+    "ansible_memory_mb.real.free": "37"
+}
+2022-07-09 06:53:10,936 p=3172 u=vagrant n=ansible | TASK [Print Processor name] *********************************************************************************
+2022-07-09 06:53:11,162 p=3172 u=vagrant n=ansible | ok: [Node1] => {
+    "ansible_processor[2]": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"
+}
+2022-07-09 06:53:11,163 p=3172 u=vagrant n=ansible | ok: [Node2] => {
+    "ansible_processor[2]": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"
+}
+2022-07-09 06:53:11,164 p=3172 u=vagrant n=ansible | ok: [Node3] => {
+    "ansible_processor[2]": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"
+}
+2022-07-09 06:53:11,167 p=3172 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-09 06:53:11,168 p=3172 u=vagrant n=ansible | Node1                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:53:11,168 p=3172 u=vagrant n=ansible | Node2                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:53:11,168 p=3172 u=vagrant n=ansible | Node3                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
