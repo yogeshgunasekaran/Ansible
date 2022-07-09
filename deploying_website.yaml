@@ -32,7 +32,14 @@
          - php
        state: latest
      when: ansible_distribution == "CentOS"
- 
+
+   - name: Start & enable httpd on Redhat
+     service:
+       name: httpd
+       state: started
+       enabled: yes
+     when: ansible_os_family == "RedHat"
+   
    - name: Install apache2 service on Node4 (Ubuntu)
      tags: apache,apache2,ubuntu
      apt:
@@ -42,6 +49,22 @@
        state: latest
      when: ansible_distribution == "Ubuntu"
  
+   - name: Changing e-mail address for default Serveradmin
+     tags: apache,centos,httpd
+     lineinfile:
+       path: /etc/httpd/conf/httpd.conf
+       regexp: '^ServerAdmin'
+       line: ServerAdmin yogeshgunasekaran@gmail.com
+     when: ansible_distribution == "CentOS"
+     register: httpd
+ 
+   - name: Restart httpd (CentOS)
+     tags: apache,centos,httpd
+     service:
+       name: httpd
+       state: restarted
+     when: httpd.changed 
+
    - name: Copy our html file from files/ to Web-Server's defaults
      tags: apache,apache,apache2,httpd
      copy:
@@ -51,12 +74,7 @@
        group: root
        mode: 0644
    
-   - name: Start & enable httpd on Redhat
-     service:
-       name: httpd
-       state: started
-       enabled: yes
-     when: ansible_os_family == "RedHat"
+
 
  - name: Provisioning group2 as db-Server
    hosts: group2

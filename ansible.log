@@ -7458,3 +7458,61 @@ The offending line appears to be:
 2022-07-09 12:30:26,918 p=8887 u=vagrant n=ansible | Node2                      : ok=6    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2022-07-09 12:30:26,918 p=8887 u=vagrant n=ansible | Node3                      : ok=4    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2022-07-09 12:30:26,919 p=8887 u=vagrant n=ansible | Node4                      : ok=5    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-07-09 12:55:49,427 p=9179 u=vagrant n=ansible | playbook: deploying_website.yaml
+2022-07-09 12:57:38,658 p=9187 u=vagrant n=ansible | PLAY [Install OS updates for all 4 servers] *******************************************************************************
+2022-07-09 12:57:38,682 p=9187 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:57:43,657 p=9187 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:57:43,913 p=9187 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:57:44,077 p=9187 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:57:45,869 p=9187 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:57:45,888 p=9187 u=vagrant n=ansible | TASK [Install updates (CentOS)] *******************************************************************************************
+2022-07-09 12:57:46,243 p=9187 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:57:51,323 p=9187 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:57:51,593 p=9187 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:57:51,638 p=9187 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:57:51,653 p=9187 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] *******************************************************************************************
+2022-07-09 12:57:51,883 p=9187 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 12:57:51,924 p=9187 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 12:57:52,004 p=9187 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 12:58:00,441 p=9187 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:58:00,448 p=9187 u=vagrant n=ansible | PLAY [Provisioning group1 as Web-Servers] *********************************************************************************
+2022-07-09 12:58:00,469 p=9187 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:58:02,678 p=9187 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:58:02,835 p=9187 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:58:03,195 p=9187 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:58:03,215 p=9187 u=vagrant n=ansible | TASK [Install httpd package on Node1, 2 & 4] ******************************************************************************
+2022-07-09 12:58:03,516 p=9187 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:58:32,510 p=9187 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:58:33,168 p=9187 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:58:33,183 p=9187 u=vagrant n=ansible | TASK [Start & enable httpd on Redhat] *************************************************************************************
+2022-07-09 12:58:33,497 p=9187 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:58:38,104 p=9187 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:58:38,497 p=9187 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:58:38,519 p=9187 u=vagrant n=ansible | TASK [Install apache2 service on Node4 (Ubuntu)] **************************************************************************
+2022-07-09 12:58:38,854 p=9187 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 12:58:38,940 p=9187 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 12:58:40,853 p=9187 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:58:40,867 p=9187 u=vagrant n=ansible | TASK [Changing e-mail address for default Serveradmin] ********************************************************************
+2022-07-09 12:58:41,148 p=9187 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:58:42,541 p=9187 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 12:58:42,559 p=9187 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 12:58:42,581 p=9187 u=vagrant n=ansible | TASK [Restart httpd (CentOS)] *********************************************************************************************
+2022-07-09 12:58:42,891 p=9187 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 12:58:47,393 p=9187 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 12:58:47,494 p=9187 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 12:58:47,513 p=9187 u=vagrant n=ansible | TASK [Copy our html file from files/ to Web-Server's defaults] ************************************************************
+2022-07-09 12:58:50,797 p=9187 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:58:50,841 p=9187 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:58:50,842 p=9187 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:58:50,852 p=9187 u=vagrant n=ansible | PLAY [Provisioning group2 as db-Server] ***********************************************************************************
+2022-07-09 12:58:50,875 p=9187 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:58:52,382 p=9187 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:58:52,401 p=9187 u=vagrant n=ansible | TASK [Install mariadb server package in Node3 (CentOS)] *******************************************************************
+2022-07-09 12:59:13,377 p=9187 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:59:13,395 p=9187 u=vagrant n=ansible | TASK [Install mariadb server] *********************************************************************************************
+2022-07-09 12:59:13,471 p=9187 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 12:59:13,475 p=9187 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-09 12:59:13,476 p=9187 u=vagrant n=ansible | Node1                      : ok=8    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:59:13,476 p=9187 u=vagrant n=ansible | Node2                      : ok=8    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:59:13,477 p=9187 u=vagrant n=ansible | Node3                      : ok=4    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:59:13,477 p=9187 u=vagrant n=ansible | Node4                      : ok=5    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
