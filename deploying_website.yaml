@@ -5,18 +5,18 @@
    become: true
    pre_tasks:
  
-   - name: Install updates (CentOS)
+   - name: Update repository index (CentOS)
      tags: update
      yum:
-       update_only: yes
        update_cache: yes
+     changed_when: false
      when: ansible_distribution == "CentOS"
  
-   - name: Install updates (Ubuntu)
+   - name: Update repository index (Ubuntu)
      tags: update
      apt:
-       upgrade: dist
        update_cache: yes
+     changed_when: false
      when: ansible_distribution == "Ubuntu"
  
  - name: Provisioning group1 as Web-Servers 

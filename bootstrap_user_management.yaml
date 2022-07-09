@@ -1,0 +1,47 @@
+
+---
+ 
+ - hosts: all
+   become: true
+   pre_tasks:
+ 
+   - name: Install updates (CentOS)
+     tags: always
+     yum:
+       update_only: yes
+       update_cache: yes
+     when: ansible_distribution == "CentOS"
+ 
+   - name: Install updates (Ubuntu)
+     tags: always
+     apt:
+       upgrade: dist
+       update_cache: yes
+     when: ansible_distribution == "Ubuntu"
+ 
+ - hosts: all
+   become: true
+   tasks:
+ 
+   - name: Add a group devops in all servers
+     group:
+       name: ansible
+       state: present
+
+   - name: Create a 'ansibleadmin' user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command
+     user:
+       name: ansibleadmin
+       groups: ansible 
+ 
+   - name: Add 'ansible.pub' ssh-key for ansibleadmin
+     authorized_key:
+       user: ansibleadmin
+       key: "{{ lookup('file', '/home/vagrant/.ssh/ansible.pub') }}"
+      
+   - name: Add sudoers file for ansibleadmin in /etc/sudoers.d/ in all servers
+     copy:
+       src: files/sudoer_ansibleadmin
+       dest: /etc/sudoers.d/ansibleadmin
+       owner: ansible
+       group: ansible
+       mode: 0440

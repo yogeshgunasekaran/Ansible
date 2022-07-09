@@ -7516,3 +7516,227 @@ The offending line appears to be:
 2022-07-09 12:59:13,476 p=9187 u=vagrant n=ansible | Node2                      : ok=8    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2022-07-09 12:59:13,477 p=9187 u=vagrant n=ansible | Node3                      : ok=4    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2022-07-09 12:59:13,477 p=9187 u=vagrant n=ansible | Node4                      : ok=5    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+2022-07-09 14:36:23,293 p=9638 u=vagrant n=ansible | playbook: bootstrap_user_management.yaml
+2022-07-09 14:36:40,488 p=9646 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:36:40,640 p=9646 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:36:46,152 p=9646 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:36:46,644 p=9646 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:36:46,788 p=9646 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:36:47,842 p=9646 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:36:47,857 p=9646 u=vagrant n=ansible | TASK [Install updates (CentOS)] ****************************************************************************************************
+2022-07-09 14:36:48,255 p=9646 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 14:36:53,534 p=9646 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:36:53,952 p=9646 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:36:54,109 p=9646 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:36:54,125 p=9646 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] ****************************************************************************************************
+2022-07-09 14:36:54,381 p=9646 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 14:36:54,413 p=9646 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 14:36:54,480 p=9646 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 14:37:10,548 p=9646 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:37:10,555 p=9646 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:37:10,581 p=9646 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:37:13,808 p=9646 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:37:13,866 p=9646 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:37:13,882 p=9646 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:37:14,269 p=9646 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:37:14,319 p=9646 u=vagrant n=ansible | TASK [Create a 'ansibleadmin' system user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command] ***
+2022-07-09 14:37:16,472 p=9646 u=vagrant n=ansible | fatal: [Node4]: FAILED! => {"changed": false, "msg": "Group ansible does not exist"}
+2022-07-09 14:37:16,639 p=9646 u=vagrant n=ansible | fatal: [Node2]: FAILED! => {"changed": false, "msg": "Group ansible does not exist"}
+2022-07-09 14:37:16,759 p=9646 u=vagrant n=ansible | fatal: [Node3]: FAILED! => {"changed": false, "msg": "Group ansible does not exist"}
+2022-07-09 14:37:16,777 p=9646 u=vagrant n=ansible | fatal: [Node1]: FAILED! => {"changed": false, "msg": "Group ansible does not exist"}
+2022-07-09 14:37:16,779 p=9646 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2022-07-09 14:37:16,780 p=9646 u=vagrant n=ansible | Node1                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:37:16,780 p=9646 u=vagrant n=ansible | Node2                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:37:16,780 p=9646 u=vagrant n=ansible | Node3                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:37:16,781 p=9646 u=vagrant n=ansible | Node4                      : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:40:12,644 p=9861 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:40:12,666 p=9861 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:40:17,290 p=9861 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:40:17,476 p=9861 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:40:17,539 p=9861 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:40:17,855 p=9861 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:40:17,868 p=9861 u=vagrant n=ansible | TASK [Install updates (CentOS)] ****************************************************************************************************
+2022-07-09 14:40:18,227 p=9861 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 14:40:20,559 p=9861 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:40:20,653 p=9861 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:40:20,673 p=9861 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:40:20,691 p=9861 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] ****************************************************************************************************
+2022-07-09 14:40:20,927 p=9861 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 14:40:20,970 p=9861 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 14:40:21,043 p=9861 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 14:40:27,227 p=9861 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:40:27,235 p=9861 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:40:27,256 p=9861 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:40:30,440 p=9861 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:40:30,559 p=9861 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:40:30,592 p=9861 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:40:30,760 p=9861 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:40:30,775 p=9861 u=vagrant n=ansible | TASK [Add a group devops in all servers] *******************************************************************************************
+2022-07-09 14:40:32,960 p=9861 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 14:40:33,026 p=9861 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 14:40:33,057 p=9861 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 14:40:33,105 p=9861 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 14:40:33,122 p=9861 u=vagrant n=ansible | TASK [Create a 'ansibleadmin' user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command] ***
+2022-07-09 14:40:35,999 p=9861 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 14:40:36,182 p=9861 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 14:40:36,223 p=9861 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 14:40:36,338 p=9861 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 14:40:36,355 p=9861 u=vagrant n=ansible | TASK [Add 'ansible.pub' ssh-key for ansibleadmin] **********************************************************************************
+2022-07-09 14:40:36,865 p=10080 u=vagrant n=ansible | [WARNING]: Unable to find '/home/.ssh/ansible.pub' in expected paths (use -vvvvv to see paths)
+
+2022-07-09 14:40:36,873 p=10081 u=vagrant n=ansible | [WARNING]: Unable to find '/home/.ssh/ansible.pub' in expected paths (use -vvvvv to see paths)
+
+2022-07-09 14:40:36,878 p=10082 u=vagrant n=ansible | [WARNING]: Unable to find '/home/.ssh/ansible.pub' in expected paths (use -vvvvv to see paths)
+
+2022-07-09 14:40:36,884 p=10083 u=vagrant n=ansible | [WARNING]: Unable to find '/home/.ssh/ansible.pub' in expected paths (use -vvvvv to see paths)
+
+2022-07-09 14:40:36,896 p=9861 u=vagrant n=ansible | fatal: [Node2]: FAILED! => {"msg": "An unhandled exception occurred while running the lookup plugin 'file'. Error was a <class 'ansible.errors.AnsibleError'>, original message: could not locate file in lookup: /home/.ssh/ansible.pub"}
+2022-07-09 14:40:36,905 p=9861 u=vagrant n=ansible | fatal: [Node1]: FAILED! => {"msg": "An unhandled exception occurred while running the lookup plugin 'file'. Error was a <class 'ansible.errors.AnsibleError'>, original message: could not locate file in lookup: /home/.ssh/ansible.pub"}
+2022-07-09 14:40:36,906 p=9861 u=vagrant n=ansible | fatal: [Node3]: FAILED! => {"msg": "An unhandled exception occurred while running the lookup plugin 'file'. Error was a <class 'ansible.errors.AnsibleError'>, original message: could not locate file in lookup: /home/.ssh/ansible.pub"}
+2022-07-09 14:40:36,907 p=9861 u=vagrant n=ansible | fatal: [Node4]: FAILED! => {"msg": "An unhandled exception occurred while running the lookup plugin 'file'. Error was a <class 'ansible.errors.AnsibleError'>, original message: could not locate file in lookup: /home/.ssh/ansible.pub"}
+2022-07-09 14:40:36,908 p=9861 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2022-07-09 14:40:36,909 p=9861 u=vagrant n=ansible | Node1                      : ok=5    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:40:36,909 p=9861 u=vagrant n=ansible | Node2                      : ok=5    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:40:36,909 p=9861 u=vagrant n=ansible | Node3                      : ok=5    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:40:36,910 p=9861 u=vagrant n=ansible | Node4                      : ok=5    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:41:14,161 p=10090 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:41:14,181 p=10090 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:41:17,695 p=10090 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:41:17,902 p=10090 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:41:17,910 p=10090 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:41:18,086 p=10090 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:41:18,103 p=10090 u=vagrant n=ansible | TASK [Install updates (CentOS)] ****************************************************************************************************
+2022-07-09 14:41:18,476 p=10090 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 14:41:20,728 p=10090 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:41:20,868 p=10090 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:41:20,888 p=10090 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:41:20,904 p=10090 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] ****************************************************************************************************
+2022-07-09 14:41:21,158 p=10090 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 14:41:21,254 p=10090 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 14:41:21,350 p=10090 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 14:41:27,182 p=10090 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:41:27,189 p=10090 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:41:27,207 p=10090 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:41:30,106 p=10090 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:41:30,151 p=10090 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:41:30,333 p=10090 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:41:30,748 p=10090 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:41:30,765 p=10090 u=vagrant n=ansible | TASK [Add a group devops in all servers] *******************************************************************************************
+2022-07-09 14:41:32,843 p=10090 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:41:32,925 p=10090 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:41:32,959 p=10090 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:41:32,981 p=10090 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:41:33,001 p=10090 u=vagrant n=ansible | TASK [Create a 'ansibleadmin' user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command] ***
+2022-07-09 14:41:35,267 p=10090 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:41:35,345 p=10090 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:41:35,403 p=10090 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:41:35,429 p=10090 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:41:35,461 p=10090 u=vagrant n=ansible | TASK [Add 'ansible.pub' ssh-key for ansibleadmin] **********************************************************************************
+2022-07-09 14:41:37,945 p=10090 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 14:41:38,055 p=10090 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 14:41:38,090 p=10090 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 14:41:38,176 p=10090 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 14:41:38,194 p=10090 u=vagrant n=ansible | TASK [Add sudoers file for ansibleadmin in /etc/sudoers.d/ in all servers] *********************************************************
+2022-07-09 14:41:42,124 p=10090 u=vagrant n=ansible | fatal: [Node4]: FAILED! => {"changed": false, "checksum": "57e60a171ac0ccb231871947e7e001b968627f91", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user ansible", "owner": "root", "path": "/etc/sudoers.d/ansibleadmin", "size": 40, "state": "file", "uid": 0}
+2022-07-09 14:41:42,153 p=10090 u=vagrant n=ansible | fatal: [Node1]: FAILED! => {"changed": false, "checksum": "57e60a171ac0ccb231871947e7e001b968627f91", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user ansible", "owner": "root", "path": "/etc/sudoers.d/ansibleadmin", "secontext": "system_u:object_r:etc_t:s0", "size": 40, "state": "file", "uid": 0}
+2022-07-09 14:41:42,217 p=10090 u=vagrant n=ansible | fatal: [Node3]: FAILED! => {"changed": false, "checksum": "57e60a171ac0ccb231871947e7e001b968627f91", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user ansible", "owner": "root", "path": "/etc/sudoers.d/ansibleadmin", "secontext": "system_u:object_r:etc_t:s0", "size": 40, "state": "file", "uid": 0}
+2022-07-09 14:41:42,331 p=10090 u=vagrant n=ansible | fatal: [Node2]: FAILED! => {"changed": false, "checksum": "57e60a171ac0ccb231871947e7e001b968627f91", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user ansible", "owner": "root", "path": "/etc/sudoers.d/ansibleadmin", "secontext": "system_u:object_r:etc_t:s0", "size": 40, "state": "file", "uid": 0}
+2022-07-09 14:41:42,333 p=10090 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2022-07-09 14:41:42,333 p=10090 u=vagrant n=ansible | Node1                      : ok=6    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:41:42,334 p=10090 u=vagrant n=ansible | Node2                      : ok=6    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:41:42,334 p=10090 u=vagrant n=ansible | Node3                      : ok=6    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:41:42,334 p=10090 u=vagrant n=ansible | Node4                      : ok=6    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:43:21,386 p=10398 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:43:21,424 p=10398 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:43:26,259 p=10398 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:43:26,384 p=10398 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:43:26,454 p=10398 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:43:26,789 p=10398 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:43:26,807 p=10398 u=vagrant n=ansible | TASK [Install updates (CentOS)] ****************************************************************************************************
+2022-07-09 14:43:27,133 p=10398 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 14:43:29,536 p=10398 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:43:29,610 p=10398 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:43:29,636 p=10398 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:43:29,655 p=10398 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] ****************************************************************************************************
+2022-07-09 14:43:29,883 p=10398 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 14:43:29,927 p=10398 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 14:43:30,006 p=10398 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 14:43:36,150 p=10398 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:43:36,157 p=10398 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:43:36,186 p=10398 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:43:39,309 p=10398 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:43:39,416 p=10398 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:43:39,549 p=10398 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:43:39,741 p=10398 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:43:39,764 p=10398 u=vagrant n=ansible | TASK [Add a group devops in all servers] *******************************************************************************************
+2022-07-09 14:43:41,938 p=10398 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:43:41,992 p=10398 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:43:42,023 p=10398 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:43:42,050 p=10398 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:43:42,071 p=10398 u=vagrant n=ansible | TASK [Create a 'ansibleadmin' user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command] ***
+2022-07-09 14:43:44,442 p=10398 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:43:44,512 p=10398 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:43:44,539 p=10398 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:43:44,540 p=10398 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:43:44,562 p=10398 u=vagrant n=ansible | TASK [Add 'ansible.pub' ssh-key for ansibleadmin] **********************************************************************************
+2022-07-09 14:43:47,149 p=10398 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:43:47,195 p=10398 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:43:47,233 p=10398 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:43:47,348 p=10398 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:43:47,364 p=10398 u=vagrant n=ansible | TASK [Add sudoers file for ansibleadmin in /etc/sudoers.d/ in all servers] *********************************************************
+2022-07-09 14:43:51,075 p=10398 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 14:43:51,185 p=10398 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 14:43:51,208 p=10398 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 14:43:51,215 p=10398 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 14:43:51,220 p=10398 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2022-07-09 14:43:51,221 p=10398 u=vagrant n=ansible | Node1                      : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:43:51,221 p=10398 u=vagrant n=ansible | Node2                      : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:43:51,222 p=10398 u=vagrant n=ansible | Node3                      : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:43:51,222 p=10398 u=vagrant n=ansible | Node4                      : ok=7    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:44:19,961 p=10705 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:44:19,985 p=10705 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:44:23,424 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:23,506 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:23,569 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:23,999 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:24,020 p=10705 u=vagrant n=ansible | TASK [Install updates (CentOS)] ****************************************************************************************************
+2022-07-09 14:44:24,461 p=10705 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 14:44:26,649 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:26,683 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:26,751 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:26,765 p=10705 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] ****************************************************************************************************
+2022-07-09 14:44:26,989 p=10705 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 14:44:27,063 p=10705 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 14:44:27,117 p=10705 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 14:44:33,336 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:33,342 p=10705 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************
+2022-07-09 14:44:33,360 p=10705 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2022-07-09 14:44:36,653 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:36,801 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:36,826 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:37,423 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:37,445 p=10705 u=vagrant n=ansible | TASK [Add a group devops in all servers] *******************************************************************************************
+2022-07-09 14:44:39,975 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:40,043 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:40,078 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:40,101 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:40,152 p=10705 u=vagrant n=ansible | TASK [Create a 'ansibleadmin' user in all the servers, with sudoer access and also ansible public-key attached with it - to run all the ansible-playbooks without requiring a password or --ask-become-pass command] ***
+2022-07-09 14:44:43,022 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:43,058 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:43,157 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:43,188 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:43,212 p=10705 u=vagrant n=ansible | TASK [Add 'ansible.pub' ssh-key for ansibleadmin] **********************************************************************************
+2022-07-09 14:44:46,024 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:46,060 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:46,090 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:46,310 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:46,339 p=10705 u=vagrant n=ansible | TASK [Add sudoers file for ansibleadmin in /etc/sudoers.d/ in all servers] *********************************************************
+2022-07-09 14:44:50,114 p=10705 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 14:44:50,217 p=10705 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 14:44:50,247 p=10705 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 14:44:50,248 p=10705 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 14:44:50,253 p=10705 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2022-07-09 14:44:50,253 p=10705 u=vagrant n=ansible | Node1                      : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:44:50,254 p=10705 u=vagrant n=ansible | Node2                      : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:44:50,254 p=10705 u=vagrant n=ansible | Node3                      : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2022-07-09 14:44:50,254 p=10705 u=vagrant n=ansible | Node4                      : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

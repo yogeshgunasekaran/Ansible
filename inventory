@@ -1,9 +1,9 @@
 
 
-Node1 ansible_host=192.168.29.209 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
-Node2 ansible_host=192.168.29.75 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
-Node3 ansible_host=192.168.29.71 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
-Node4 ansible_host=192.168.29.23 ansible_user=vagrant ansible_ssh_private_key_file=~/.ssh/ansible
+Node1 ansible_host=192.168.29.209 
+Node2 ansible_host=192.168.29.75 
+Node3 ansible_host=192.168.29.71 
+Node4 ansible_host=192.168.29.23 
 
 [group1]
 Node1
@@ -17,7 +17,7 @@ Node3
 group1
 group2
 
-[group_of_groups:vars]
+#[group_of_groups:vars]
 #ansible_user=vagrant
 #ansible_ssh_private_key_file=~/.ssh/ansible
 
