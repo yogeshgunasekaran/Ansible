@@ -1,0 +1,6 @@
+
+# Variables accessible by group1
+#
+USRNM: user1
+COMM: variables from group_vars/group1 file
+

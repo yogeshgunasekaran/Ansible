@@ -1,0 +1,6 @@
+
+# Variables accessible by all-groups globally 
+
+USRNM: globaluser
+COMM: value from group_vars/all file
+

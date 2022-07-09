@@ -3127,3 +3127,100 @@
 2022-07-08 17:58:53,342 p=28826 u=vagrant n=ansible | ok: [Node3]
 2022-07-08 17:58:53,345 p=28826 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
 2022-07-08 17:58:53,346 p=28826 u=vagrant n=ansible | Node3                      : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:36:41,028 p=2831 u=vagrant n=ansible | playbook: variables_precedence.yaml
+2022-07-09 06:36:48,727 p=2839 u=vagrant n=ansible | PLAY [Understanding the Precedence of Variables] ************************************************************
+2022-07-09 06:36:48,813 p=2839 u=vagrant n=ansible | TASK [Create a User] ****************************************************************************************
+2022-07-09 06:36:49,355 p=2839 u=vagrant n=ansible | fatal: [Node1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'COMM' is undefined\n\nThe error appears to be in '/home/vagrant/Ansible/variables_precedence.yaml': line 8, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Create a User\n      ^ here\n"}
+2022-07-09 06:36:49,366 p=2839 u=vagrant n=ansible | fatal: [Node2]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'COMM' is undefined\n\nThe error appears to be in '/home/vagrant/Ansible/variables_precedence.yaml': line 8, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Create a User\n      ^ here\n"}
+2022-07-09 06:36:49,367 p=2839 u=vagrant n=ansible | fatal: [Node3]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'COMM' is undefined\n\nThe error appears to be in '/home/vagrant/Ansible/variables_precedence.yaml': line 8, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Create a User\n      ^ here\n"}
+2022-07-09 06:36:49,369 p=2839 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-09 06:36:49,369 p=2839 u=vagrant n=ansible | Node1                      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:36:49,369 p=2839 u=vagrant n=ansible | Node2                      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:36:49,369 p=2839 u=vagrant n=ansible | Node3                      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:39:16,910 p=2869 u=vagrant n=ansible | PLAY [Understanding the Precedence of Variables] ************************************************************
+2022-07-09 06:39:16,926 p=2869 u=vagrant n=ansible | TASK [Create a User] ****************************************************************************************
+2022-07-09 06:39:21,431 p=2869 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 06:39:21,586 p=2869 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 06:39:21,717 p=2869 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 06:39:21,742 p=2869 u=vagrant n=ansible | TASK [debug] ************************************************************************************************
+2022-07-09 06:39:21,931 p=2869 u=vagrant n=ansible | ok: [Node1] => {
+    "USROUT.name": "globaluser"
+}
+2022-07-09 06:39:21,932 p=2869 u=vagrant n=ansible | ok: [Node2] => {
+    "USROUT.name": "globaluser"
+}
+2022-07-09 06:39:21,938 p=2869 u=vagrant n=ansible | ok: [Node3] => {
+    "USROUT.name": "globaluser"
+}
+2022-07-09 06:39:21,944 p=2869 u=vagrant n=ansible | TASK [debug] ************************************************************************************************
+2022-07-09 06:39:22,130 p=2869 u=vagrant n=ansible | ok: [Node1] => {
+    "USROUT.comment": "value from group_vars/all file"
+}
+2022-07-09 06:39:22,140 p=2869 u=vagrant n=ansible | ok: [Node2] => {
+    "USROUT.comment": "value from group_vars/all file"
+}
+2022-07-09 06:39:22,141 p=2869 u=vagrant n=ansible | ok: [Node3] => {
+    "USROUT.comment": "value from group_vars/all file"
+}
+2022-07-09 06:39:22,145 p=2869 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-09 06:39:22,145 p=2869 u=vagrant n=ansible | Node1                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:39:22,145 p=2869 u=vagrant n=ansible | Node2                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:39:22,146 p=2869 u=vagrant n=ansible | Node3                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:44:52,311 p=3002 u=vagrant n=ansible | PLAY [Understanding the Precedence of Variables] ************************************************************
+2022-07-09 06:44:52,330 p=3002 u=vagrant n=ansible | TASK [Create a User] ****************************************************************************************
+2022-07-09 06:44:55,367 p=3002 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 06:44:55,586 p=3002 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 06:44:55,620 p=3002 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 06:44:55,630 p=3002 u=vagrant n=ansible | TASK [debug] ************************************************************************************************
+2022-07-09 06:44:55,872 p=3002 u=vagrant n=ansible | ok: [Node1] => {
+    "USROUT.name": "user1"
+}
+2022-07-09 06:44:55,874 p=3002 u=vagrant n=ansible | ok: [Node2] => {
+    "USROUT.name": "user1"
+}
+2022-07-09 06:44:55,882 p=3002 u=vagrant n=ansible | ok: [Node3] => {
+    "USROUT.name": "globaluser"
+}
+2022-07-09 06:44:55,888 p=3002 u=vagrant n=ansible | TASK [debug] ************************************************************************************************
+2022-07-09 06:44:56,084 p=3002 u=vagrant n=ansible | ok: [Node1] => {
+    "USROUT.comment": "variables from group_vars/group1 file"
+}
+2022-07-09 06:44:56,085 p=3002 u=vagrant n=ansible | ok: [Node2] => {
+    "USROUT.comment": "variables from group_vars/group1 file"
+}
+2022-07-09 06:44:56,086 p=3002 u=vagrant n=ansible | ok: [Node3] => {
+    "USROUT.comment": "value from group_vars/all file"
+}
+2022-07-09 06:44:56,091 p=3002 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-09 06:44:56,091 p=3002 u=vagrant n=ansible | Node1                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:44:56,091 p=3002 u=vagrant n=ansible | Node2                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:44:56,092 p=3002 u=vagrant n=ansible | Node3                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:47:53,416 p=3081 u=vagrant n=ansible | PLAY [Understanding the Precedence of Variables] ************************************************************
+2022-07-09 06:47:53,435 p=3081 u=vagrant n=ansible | TASK [Create a User] ****************************************************************************************
+2022-07-09 06:47:56,585 p=3081 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 06:47:56,619 p=3081 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 06:47:56,754 p=3081 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 06:47:56,760 p=3081 u=vagrant n=ansible | TASK [debug] ************************************************************************************************
+2022-07-09 06:47:57,004 p=3081 u=vagrant n=ansible | ok: [Node1] => {
+    "USROUT.name": "user1"
+}
+2022-07-09 06:47:57,020 p=3081 u=vagrant n=ansible | ok: [Node3] => {
+    "USROUT.name": "node3user"
+}
+2022-07-09 06:47:57,021 p=3081 u=vagrant n=ansible | ok: [Node2] => {
+    "USROUT.name": "user1"
+}
+2022-07-09 06:47:57,032 p=3081 u=vagrant n=ansible | TASK [debug] ************************************************************************************************
+2022-07-09 06:47:57,284 p=3081 u=vagrant n=ansible | ok: [Node1] => {
+    "USROUT.comment": "variables from group_vars/group1 file"
+}
+2022-07-09 06:47:57,285 p=3081 u=vagrant n=ansible | ok: [Node3] => {
+    "USROUT.comment": "variable from host_vars/Node3 file"
+}
+2022-07-09 06:47:57,287 p=3081 u=vagrant n=ansible | ok: [Node2] => {
+    "USROUT.comment": "variables from group_vars/group1 file"
+}
+2022-07-09 06:47:57,292 p=3081 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************
+2022-07-09 06:47:57,292 p=3081 u=vagrant n=ansible | Node1                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:47:57,292 p=3081 u=vagrant n=ansible | Node2                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-07-09 06:47:57,293 p=3081 u=vagrant n=ansible | Node3                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

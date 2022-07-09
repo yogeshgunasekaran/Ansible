@@ -1,0 +1,19 @@
+
+---
+- name: Understanding the Precedence of Variables
+  hosts: all
+  become: yes
+  gather_facts: False
+  tasks:
+    - name: Create a User
+      user:
+        name: "{{USRNM}}"
+        comment: "{{COMM}}"
+      register: USROUT
+
+    - debug:
+        var: USROUT.name
+
+    - debug:
+        var: USROUT.comment
+

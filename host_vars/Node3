@@ -1,0 +1,6 @@
+
+# variables accessible by Node3 host
+
+USRNM: node3user
+COMM: variable from host_vars/Node3 file
+
