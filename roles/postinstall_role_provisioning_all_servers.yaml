@@ -1,0 +1,8 @@
+
+---
+
+- name: Provisioning all 4 Servers using roles 
+  hosts: all
+  become: yes
+  roles:
+    - post-install      

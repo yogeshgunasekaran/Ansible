@@ -1,0 +1,90 @@
+---
+# tasks file for post-install
+
+- name: Provisioning Node1, Node2, Node3 on CentOS
+  yum:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  when: ansible_distribution == "CentOS"
+  loop:
+    - ntp
+    - wget
+    - git
+    - zip
+    - unzip
+    - tree
+
+- name: Provisioning Node4 on Ubuntu
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  when: ansible_distribution == "Ubuntu"
+  loop:
+    - ntp
+    - wget
+    - git
+    - zip
+    - unzip
+    - tree
+
+- name: Start & enable NTP on Redhat
+  service:
+    name: ntpd
+    state: started
+    enabled: yes
+  when: ansible_os_family == "RedHat"
+
+- name: Start & enable NTP on Debian
+  service:
+    name: ntp
+    state: started
+    enabled: yes
+  when: ansible_os_family == "Debian"
+
+- name: Add a group devops in all servers
+  group:
+    name: devops
+    state: present
+
+- name: Add list of users. Here loop variables are declared in group_vars/all file
+  user:
+    name: "{{item}}"
+    state: present
+    groups: devops
+  loop: "{{usernames}}"
+
+- name: Updating the Banner file in /etc/motd in all servers
+  copy:
+    content: "This {{ansible_distribution}} server is Managed by Ansible.\n"
+    dest: /etc/motd
+
+- name: Deploy updated NTP conf file for RedHat servers
+  template:
+    src: ntp_redhat.conf.j2
+    dest: "{{ntp_path}}"
+  when: ansible_os_family == "RedHat"
+  notify:
+    - Restart NTP on Redhat
+
+- name: Deploy updated NTP conf file for Debian servers
+  template:
+    src: ntp_debian.conf.j2
+    dest: "{{ntp_path}}"
+  when: ansible_os_family == "Debian"
+  notify:
+    - Restart NTP on Debian
+
+- name: Create a directory for dev data
+  file:
+    path: /opt/devdata
+    state: directory
+    mode: 0775
+  tags:
+    - system
+
+- name: Copy files/dev.txt to /opt/devdata/dev.txt
+  copy:
+    src: dev.txt
+    dest: /opt/devdata/dev.txt

@@ -1,0 +1,19 @@
+---
+# defaults file for post-install
+# This file can be used to declare variables 
+# First priority goes to vars/main.yml and then next priority for variables comes here 
+
+usernames:
+- devopsuser1
+- devopsuser2
+- devopsuser3
+- devopsuser4
+- devopsuser5
+
+ntp0: 0.north-america.pool.ntp.org
+ntp1: 1.north-america.pool.ntp.org
+ntp2: 2.north-america.pool.ntp.org
+ntp3: 3.north-america.pool.ntp.org
+
+ntp_path: /etc/ntp.conf
+
