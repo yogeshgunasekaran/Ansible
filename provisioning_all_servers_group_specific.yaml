@@ -1,15 +1,30 @@
 
 ---
 
-- name: Provisioning all 4 Servers 
+- name: Install OS updates for all 4 servers
   hosts: all
+  become: yes
+  tasks:
+    - name: Install updates (CentOS)
+      yum:
+        update_only: yes
+        update_cache: yes
+      when: ansible_distribution == "CentOS"
+
+    - name: Install updates (Ubuntu)
+      apt:
+        upgrade: dist
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"  
+
+- name: Provisioning group1 Servers 
+  hosts: group1
   become: yes
   tasks:
     - name: Provisioning Node1, Node2, Node3 on CentOS
       yum:
         name: "{{item}}"
         state: present
-        update_cache: yes
       when: ansible_distribution == "CentOS"
       loop:
         - ntp
@@ -18,12 +33,22 @@
         - zip
         - unzip
         - tree
+    - name: Start & enable NTP on Redhat
+      service:
+        name: ntpd
+        state: started
+        enabled: yes
+      when: ansible_os_family == "RedHat"
 
+        
+- name: Provisioning group2 Servers
+  hosts: group2
+  become: yes
+  tasks:
     - name: Provisioning Node4 on Ubuntu
       apt:
         name: "{{item}}"
         state: present
-        update_cache: yes
       when: ansible_distribution == "Ubuntu"
       loop:
         - ntp
@@ -32,14 +57,6 @@
         - zip
         - unzip
         - tree    
-
-    - name: Start & enable NTP on Redhat
-      service:
-        name: ntpd
-        state: started
-        enabled: yes
-      when: ansible_os_family == "RedHat"
-
     - name: Start & enable NTP on Debian
       service:
         name: ntp
@@ -47,6 +64,11 @@
         enabled: yes
       when: ansible_os_family == "Debian"
 
+
+- name: Create users and groups all 4 servers
+  hosts: all
+  become: yes
+  tasks:
     - name: Add a group devops in all servers
       group:
         name: devops
