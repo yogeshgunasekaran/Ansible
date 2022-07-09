@@ -59,3 +59,33 @@
         groups: devops
       loop: "{{usernames}}"
 
+    - name: Updating the Banner file in /etc/motd in all servers
+      copy:
+        content: "This {{ansible_distribution}} server is Managed by Ansible.\n"
+        dest: /etc/motd
+
+    - name: Deploy updated NTP conf file for RedHat servers
+      template:
+        src: templates/ntp_redhat.conf.j2
+        dest: /etc/ntp.conf
+      when: ansible_os_family == "RedHat"
+
+    - name: Deploy updated NTP conf file for Debian servers
+      template:
+        src: templates/ntp_debian.conf.j2
+        dest: /etc/ntp.conf
+      when: ansible_os_family == "Debian"
+
+    - name: Restart NTP on Redhat
+      service:
+        name: ntpd
+        state: restarted
+        enabled: yes
+      when: ansible_os_family == "RedHat"
+
+    - name: Restart NTP on Debian
+      service:
+        name: ntp
+        state: restarted
+        enabled: yes
+      when: ansible_os_family == "Debian"

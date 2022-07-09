@@ -7022,3 +7022,235 @@
 2022-07-09 10:07:09,551 p=6253 u=vagrant n=ansible | Node2                      : ok=8    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 2022-07-09 10:07:09,551 p=6253 u=vagrant n=ansible | Node3                      : ok=6    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
 2022-07-09 10:07:09,551 p=6253 u=vagrant n=ansible | Node4                      : ok=6    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2022-07-09 11:03:14,546 p=6978 u=vagrant n=ansible | playbook: provisioning_all_servers.yaml
+2022-07-09 11:03:19,465 p=6986 u=vagrant n=ansible | PLAY [Provisioning all 4 Servers] *****************************************************************************************
+2022-07-09 11:03:19,493 p=6986 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 11:03:25,697 p=6986 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:03:25,804 p=6986 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:03:25,885 p=6986 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:03:29,604 p=6986 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:03:29,627 p=6986 u=vagrant n=ansible | TASK [Provisioning Node1, Node2, Node3 on CentOS] *************************************************************************
+2022-07-09 11:03:30,051 p=6986 u=vagrant n=ansible | skipping: [Node4] => (item=ntp) 
+2022-07-09 11:03:30,052 p=6986 u=vagrant n=ansible | skipping: [Node4] => (item=wget) 
+2022-07-09 11:03:30,053 p=6986 u=vagrant n=ansible | skipping: [Node4] => (item=git) 
+2022-07-09 11:03:30,054 p=6986 u=vagrant n=ansible | skipping: [Node4] => (item=zip) 
+2022-07-09 11:03:30,129 p=6986 u=vagrant n=ansible | skipping: [Node4] => (item=unzip) 
+2022-07-09 11:03:30,131 p=6986 u=vagrant n=ansible | skipping: [Node4] => (item=tree) 
+2022-07-09 11:03:32,597 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=ntp)
+2022-07-09 11:03:32,672 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=ntp)
+2022-07-09 11:03:32,677 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=ntp)
+2022-07-09 11:03:34,999 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=wget)
+2022-07-09 11:03:35,261 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=wget)
+2022-07-09 11:03:35,264 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=wget)
+2022-07-09 11:03:37,445 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=git)
+2022-07-09 11:03:37,807 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=git)
+2022-07-09 11:03:37,846 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=git)
+2022-07-09 11:03:39,912 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=zip)
+2022-07-09 11:03:40,416 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=zip)
+2022-07-09 11:03:40,447 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=zip)
+2022-07-09 11:03:42,332 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=unzip)
+2022-07-09 11:03:43,016 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=unzip)
+2022-07-09 11:03:43,069 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=unzip)
+2022-07-09 11:03:44,578 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=tree)
+2022-07-09 11:03:45,300 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=tree)
+2022-07-09 11:03:45,369 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=tree)
+2022-07-09 11:03:45,395 p=6986 u=vagrant n=ansible | TASK [Provisioning Node4 on Ubuntu] ***************************************************************************************
+2022-07-09 11:03:45,694 p=6986 u=vagrant n=ansible | skipping: [Node1] => (item=ntp) 
+2022-07-09 11:03:45,695 p=6986 u=vagrant n=ansible | skipping: [Node1] => (item=wget) 
+2022-07-09 11:03:45,770 p=6986 u=vagrant n=ansible | skipping: [Node1] => (item=git) 
+2022-07-09 11:03:45,772 p=6986 u=vagrant n=ansible | skipping: [Node1] => (item=zip) 
+2022-07-09 11:03:45,772 p=6986 u=vagrant n=ansible | skipping: [Node1] => (item=unzip) 
+2022-07-09 11:03:45,773 p=6986 u=vagrant n=ansible | skipping: [Node1] => (item=tree) 
+2022-07-09 11:03:45,847 p=6986 u=vagrant n=ansible | skipping: [Node2] => (item=ntp) 
+2022-07-09 11:03:45,847 p=6986 u=vagrant n=ansible | skipping: [Node2] => (item=wget) 
+2022-07-09 11:03:45,848 p=6986 u=vagrant n=ansible | skipping: [Node2] => (item=git) 
+2022-07-09 11:03:45,849 p=6986 u=vagrant n=ansible | skipping: [Node2] => (item=zip) 
+2022-07-09 11:03:45,886 p=6986 u=vagrant n=ansible | skipping: [Node2] => (item=unzip) 
+2022-07-09 11:03:45,887 p=6986 u=vagrant n=ansible | skipping: [Node2] => (item=tree) 
+2022-07-09 11:03:45,929 p=6986 u=vagrant n=ansible | skipping: [Node3] => (item=ntp) 
+2022-07-09 11:03:45,930 p=6986 u=vagrant n=ansible | skipping: [Node3] => (item=wget) 
+2022-07-09 11:03:45,931 p=6986 u=vagrant n=ansible | skipping: [Node3] => (item=git) 
+2022-07-09 11:03:45,932 p=6986 u=vagrant n=ansible | skipping: [Node3] => (item=zip) 
+2022-07-09 11:03:45,938 p=6986 u=vagrant n=ansible | skipping: [Node3] => (item=unzip) 
+2022-07-09 11:03:45,939 p=6986 u=vagrant n=ansible | skipping: [Node3] => (item=tree) 
+2022-07-09 11:03:54,373 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=ntp)
+2022-07-09 11:03:59,442 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=wget)
+2022-07-09 11:04:04,552 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=git)
+2022-07-09 11:04:09,205 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=zip)
+2022-07-09 11:04:13,843 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=unzip)
+2022-07-09 11:04:18,439 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=tree)
+2022-07-09 11:04:18,456 p=6986 u=vagrant n=ansible | TASK [Start & enable NTP on Redhat] ***************************************************************************************
+2022-07-09 11:04:18,852 p=6986 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:04:21,087 p=6986 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:04:21,186 p=6986 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:04:21,257 p=6986 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:04:21,273 p=6986 u=vagrant n=ansible | TASK [Start & enable NTP on Debian] ***************************************************************************************
+2022-07-09 11:04:21,512 p=6986 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 11:04:21,576 p=6986 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 11:04:21,639 p=6986 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 11:04:22,559 p=6986 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:04:22,575 p=6986 u=vagrant n=ansible | TASK [Add a group devops in all servers] **********************************************************************************
+2022-07-09 11:04:24,669 p=6986 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:04:24,697 p=6986 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:04:24,765 p=6986 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:04:24,787 p=6986 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:04:24,812 p=6986 u=vagrant n=ansible | TASK [Add list of users. Here loop variables are declared in group_vars/all file] *****************************************
+2022-07-09 11:04:27,448 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser1)
+2022-07-09 11:04:27,528 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser1)
+2022-07-09 11:04:27,541 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser1)
+2022-07-09 11:04:27,605 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser1)
+2022-07-09 11:04:29,933 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser2)
+2022-07-09 11:04:29,934 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser2)
+2022-07-09 11:04:29,968 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser2)
+2022-07-09 11:04:30,008 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser2)
+2022-07-09 11:04:31,572 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser3)
+2022-07-09 11:04:31,885 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser3)
+2022-07-09 11:04:32,084 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser3)
+2022-07-09 11:04:32,127 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser3)
+2022-07-09 11:04:33,179 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser4)
+2022-07-09 11:04:34,054 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser4)
+2022-07-09 11:04:34,055 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser4)
+2022-07-09 11:04:34,056 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser4)
+2022-07-09 11:04:34,595 p=6986 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser5)
+2022-07-09 11:04:35,805 p=6986 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser5)
+2022-07-09 11:04:35,847 p=6986 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser5)
+2022-07-09 11:04:35,880 p=6986 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser5)
+2022-07-09 11:04:35,951 p=6986 u=vagrant n=ansible | TASK [Updating the Banner file in /etc/motd in all servers] ***************************************************************
+2022-07-09 11:04:40,141 p=6986 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 11:04:40,169 p=6986 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 11:04:40,194 p=6986 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 11:04:40,202 p=6986 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 11:04:40,273 p=6986 u=vagrant n=ansible | TASK [Deploy updated NTP conf file for RedHat servers] ********************************************************************
+2022-07-09 11:04:40,624 p=6986 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:04:41,001 p=6986 u=vagrant n=ansible | fatal: [Node1]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/ntp_redhat.conf.j2'\nSearched in:\n\t/home/vagrant/Ansible/templates/ntp_redhat.conf.j2\n\t/home/vagrant/Ansible/templates/ntp_redhat.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2022-07-09 11:04:41,014 p=6986 u=vagrant n=ansible | fatal: [Node2]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/ntp_redhat.conf.j2'\nSearched in:\n\t/home/vagrant/Ansible/templates/ntp_redhat.conf.j2\n\t/home/vagrant/Ansible/templates/ntp_redhat.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2022-07-09 11:04:41,056 p=6986 u=vagrant n=ansible | fatal: [Node3]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/ntp_redhat.conf.j2'\nSearched in:\n\t/home/vagrant/Ansible/templates/ntp_redhat.conf.j2\n\t/home/vagrant/Ansible/templates/ntp_redhat.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2022-07-09 11:04:41,081 p=6986 u=vagrant n=ansible | TASK [Deploy updated NTP conf file for Debian servers] ********************************************************************
+2022-07-09 11:04:41,306 p=6986 u=vagrant n=ansible | fatal: [Node4]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/ntp_debian.conf.j2'\nSearched in:\n\t/home/vagrant/Ansible/templates/ntp_debian.conf.j2\n\t/home/vagrant/Ansible/templates/ntp_debian.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2022-07-09 11:04:41,309 p=6986 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-09 11:04:41,310 p=6986 u=vagrant n=ansible | Node1                      : ok=6    changed=1    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2022-07-09 11:04:41,311 p=6986 u=vagrant n=ansible | Node2                      : ok=6    changed=1    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2022-07-09 11:04:41,311 p=6986 u=vagrant n=ansible | Node3                      : ok=6    changed=1    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2022-07-09 11:04:41,311 p=6986 u=vagrant n=ansible | Node4                      : ok=6    changed=1    unreachable=0    failed=1    skipped=3    rescued=0    ignored=0   
+2022-07-09 11:07:49,357 p=7600 u=vagrant n=ansible | PLAY [Provisioning all 4 Servers] *****************************************************************************************
+2022-07-09 11:07:49,382 p=7600 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 11:07:54,150 p=7600 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:07:54,166 p=7600 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:07:54,221 p=7600 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:07:55,308 p=7600 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:07:55,328 p=7600 u=vagrant n=ansible | TASK [Provisioning Node1, Node2, Node3 on CentOS] *************************************************************************
+2022-07-09 11:07:55,750 p=7600 u=vagrant n=ansible | skipping: [Node4] => (item=ntp) 
+2022-07-09 11:07:55,751 p=7600 u=vagrant n=ansible | skipping: [Node4] => (item=wget) 
+2022-07-09 11:07:55,794 p=7600 u=vagrant n=ansible | skipping: [Node4] => (item=git) 
+2022-07-09 11:07:55,795 p=7600 u=vagrant n=ansible | skipping: [Node4] => (item=zip) 
+2022-07-09 11:07:55,795 p=7600 u=vagrant n=ansible | skipping: [Node4] => (item=unzip) 
+2022-07-09 11:07:55,796 p=7600 u=vagrant n=ansible | skipping: [Node4] => (item=tree) 
+2022-07-09 11:07:58,111 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=ntp)
+2022-07-09 11:07:58,187 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=ntp)
+2022-07-09 11:07:58,255 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=ntp)
+2022-07-09 11:08:00,350 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=wget)
+2022-07-09 11:08:00,464 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=wget)
+2022-07-09 11:08:00,501 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=wget)
+2022-07-09 11:08:02,699 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=git)
+2022-07-09 11:08:02,892 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=git)
+2022-07-09 11:08:02,926 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=git)
+2022-07-09 11:08:04,938 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=zip)
+2022-07-09 11:08:05,211 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=zip)
+2022-07-09 11:08:05,272 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=zip)
+2022-07-09 11:08:07,607 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=unzip)
+2022-07-09 11:08:07,950 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=unzip)
+2022-07-09 11:08:07,966 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=unzip)
+2022-07-09 11:08:10,065 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=tree)
+2022-07-09 11:08:10,394 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=tree)
+2022-07-09 11:08:10,419 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=tree)
+2022-07-09 11:08:10,444 p=7600 u=vagrant n=ansible | TASK [Provisioning Node4 on Ubuntu] ***************************************************************************************
+2022-07-09 11:08:10,758 p=7600 u=vagrant n=ansible | skipping: [Node1] => (item=ntp) 
+2022-07-09 11:08:10,759 p=7600 u=vagrant n=ansible | skipping: [Node1] => (item=wget) 
+2022-07-09 11:08:10,760 p=7600 u=vagrant n=ansible | skipping: [Node1] => (item=git) 
+2022-07-09 11:08:10,760 p=7600 u=vagrant n=ansible | skipping: [Node1] => (item=zip) 
+2022-07-09 11:08:10,761 p=7600 u=vagrant n=ansible | skipping: [Node1] => (item=unzip) 
+2022-07-09 11:08:10,762 p=7600 u=vagrant n=ansible | skipping: [Node1] => (item=tree) 
+2022-07-09 11:08:10,837 p=7600 u=vagrant n=ansible | skipping: [Node2] => (item=ntp) 
+2022-07-09 11:08:10,837 p=7600 u=vagrant n=ansible | skipping: [Node2] => (item=wget) 
+2022-07-09 11:08:10,895 p=7600 u=vagrant n=ansible | skipping: [Node2] => (item=git) 
+2022-07-09 11:08:10,896 p=7600 u=vagrant n=ansible | skipping: [Node2] => (item=zip) 
+2022-07-09 11:08:10,896 p=7600 u=vagrant n=ansible | skipping: [Node2] => (item=unzip) 
+2022-07-09 11:08:10,897 p=7600 u=vagrant n=ansible | skipping: [Node2] => (item=tree) 
+2022-07-09 11:08:10,966 p=7600 u=vagrant n=ansible | skipping: [Node3] => (item=ntp) 
+2022-07-09 11:08:10,966 p=7600 u=vagrant n=ansible | skipping: [Node3] => (item=wget) 
+2022-07-09 11:08:10,967 p=7600 u=vagrant n=ansible | skipping: [Node3] => (item=git) 
+2022-07-09 11:08:10,978 p=7600 u=vagrant n=ansible | skipping: [Node3] => (item=zip) 
+2022-07-09 11:08:10,979 p=7600 u=vagrant n=ansible | skipping: [Node3] => (item=unzip) 
+2022-07-09 11:08:10,980 p=7600 u=vagrant n=ansible | skipping: [Node3] => (item=tree) 
+2022-07-09 11:08:17,121 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=ntp)
+2022-07-09 11:08:23,207 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=wget)
+2022-07-09 11:08:29,125 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=git)
+2022-07-09 11:08:34,713 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=zip)
+2022-07-09 11:08:39,490 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=unzip)
+2022-07-09 11:08:44,427 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=tree)
+2022-07-09 11:08:44,443 p=7600 u=vagrant n=ansible | TASK [Start & enable NTP on Redhat] ***************************************************************************************
+2022-07-09 11:08:45,177 p=7600 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:08:47,680 p=7600 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:08:47,781 p=7600 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:08:47,822 p=7600 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:08:47,845 p=7600 u=vagrant n=ansible | TASK [Start & enable NTP on Debian] ***************************************************************************************
+2022-07-09 11:08:48,097 p=7600 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 11:08:48,237 p=7600 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 11:08:48,314 p=7600 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 11:08:49,355 p=7600 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:08:49,380 p=7600 u=vagrant n=ansible | TASK [Add a group devops in all servers] **********************************************************************************
+2022-07-09 11:08:51,636 p=7600 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:08:51,662 p=7600 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:08:51,681 p=7600 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:08:51,691 p=7600 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:08:51,714 p=7600 u=vagrant n=ansible | TASK [Add list of users. Here loop variables are declared in group_vars/all file] *****************************************
+2022-07-09 11:08:54,115 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser1)
+2022-07-09 11:08:54,302 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser1)
+2022-07-09 11:08:54,388 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser1)
+2022-07-09 11:08:54,547 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser1)
+2022-07-09 11:08:55,905 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser2)
+2022-07-09 11:08:56,363 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser2)
+2022-07-09 11:08:56,462 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser2)
+2022-07-09 11:08:56,529 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser2)
+2022-07-09 11:08:57,540 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser3)
+2022-07-09 11:08:58,356 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser3)
+2022-07-09 11:08:58,439 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser3)
+2022-07-09 11:08:58,637 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser3)
+2022-07-09 11:08:59,062 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser4)
+2022-07-09 11:09:00,491 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser4)
+2022-07-09 11:09:00,659 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser4)
+2022-07-09 11:09:00,707 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser4)
+2022-07-09 11:09:00,831 p=7600 u=vagrant n=ansible | ok: [Node4] => (item=devopsuser5)
+2022-07-09 11:09:02,185 p=7600 u=vagrant n=ansible | ok: [Node3] => (item=devopsuser5)
+2022-07-09 11:09:02,339 p=7600 u=vagrant n=ansible | ok: [Node2] => (item=devopsuser5)
+2022-07-09 11:09:02,386 p=7600 u=vagrant n=ansible | ok: [Node1] => (item=devopsuser5)
+2022-07-09 11:09:02,407 p=7600 u=vagrant n=ansible | TASK [Updating the Banner file in /etc/motd in all servers] ***************************************************************
+2022-07-09 11:09:06,410 p=7600 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 11:09:06,441 p=7600 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 11:09:06,532 p=7600 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 11:09:06,534 p=7600 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 11:09:06,556 p=7600 u=vagrant n=ansible | TASK [Deploy updated NTP conf file for RedHat servers] ********************************************************************
+2022-07-09 11:09:07,262 p=7600 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:09:10,464 p=7600 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 11:09:10,509 p=7600 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 11:09:10,530 p=7600 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 11:09:10,552 p=7600 u=vagrant n=ansible | TASK [Deploy updated NTP conf file for Debian servers] ********************************************************************
+2022-07-09 11:09:10,796 p=7600 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 11:09:10,827 p=7600 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 11:09:10,920 p=7600 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 11:09:12,194 p=7600 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 11:09:12,207 p=7600 u=vagrant n=ansible | TASK [Restart NTP on Redhat] **********************************************************************************************
+2022-07-09 11:09:12,590 p=7600 u=vagrant n=ansible | skipping: [Node4]
+2022-07-09 11:09:14,704 p=7600 u=vagrant n=ansible | changed: [Node2]
+2022-07-09 11:09:14,728 p=7600 u=vagrant n=ansible | changed: [Node3]
+2022-07-09 11:09:14,741 p=7600 u=vagrant n=ansible | changed: [Node1]
+2022-07-09 11:09:14,760 p=7600 u=vagrant n=ansible | TASK [Restart NTP on Debian] **********************************************************************************************
+2022-07-09 11:09:15,006 p=7600 u=vagrant n=ansible | skipping: [Node1]
+2022-07-09 11:09:15,027 p=7600 u=vagrant n=ansible | skipping: [Node2]
+2022-07-09 11:09:15,142 p=7600 u=vagrant n=ansible | skipping: [Node3]
+2022-07-09 11:09:16,495 p=7600 u=vagrant n=ansible | changed: [Node4]
+2022-07-09 11:09:16,500 p=7600 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-09 11:09:16,500 p=7600 u=vagrant n=ansible | Node1                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2022-07-09 11:09:16,500 p=7600 u=vagrant n=ansible | Node2                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2022-07-09 11:09:16,501 p=7600 u=vagrant n=ansible | Node3                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2022-07-09 11:09:16,501 p=7600 u=vagrant n=ansible | Node4                      : ok=8    changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
