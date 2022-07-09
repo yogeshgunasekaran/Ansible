@@ -1,0 +1,61 @@
+
+---
+
+- name: Provisioning all 4 Servers 
+  hosts: all
+  become: yes
+  tasks:
+    - name: Provisioning Node1, Node2, Node3 on CentOS
+      yum:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      when: ansible_distribution == "CentOS"
+      loop:
+        - ntp
+        - wget
+        - git
+        - zip
+        - unzip
+        - tree
+
+    - name: Provisioning Node4 on Ubuntu
+      apt:
+         name: "{{item}}"
+         state: present
+         update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+      loop:
+        - ntp
+        - wget
+        - git
+        - zip
+        - unzip
+        - tree    
+
+    - name: Start & enable NTP on Redhat
+      service:
+        name: ntpd
+        state: started
+        enabled: yes
+      when: ansible_os_family == "RedHat"
+
+    - name: Start & enable NTP on Debian
+      service:
+        name: ntp
+        state: started
+        enabled: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Add a group devops in all servers
+      group:
+         name: devops
+         state: present
+
+    - name: Add list of users. Here loop variables are declared in group_vars/all file
+      user:
+          name: "{{item}}"
+          state: present
+          groups: devops
+      loop: "{{usernames}}"
+

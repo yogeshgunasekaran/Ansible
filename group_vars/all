@@ -4,3 +4,10 @@
 USRNM: globaluser
 COMM: value from group_vars/all file
 
+usernames:
+- devopsuser1
+- devopsuser2
+- devopsuser3
+- devopsuser4
+- devopsuser5
+
