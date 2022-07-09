@@ -7339,3 +7339,122 @@
 2022-07-09 12:04:19,998 p=8565 u=vagrant n=ansible | Node2                      : ok=5    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2022-07-09 12:04:19,999 p=8565 u=vagrant n=ansible | Node3                      : ok=4    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2022-07-09 12:04:19,999 p=8565 u=vagrant n=ansible | Node4                      : ok=5    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:25:41,224 p=8867 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/vagrant/Ansible/deploying_website.yaml': line 59, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       enabled: yes
+      when: ansible_os_family == "RedHat"
+      ^ here
+
+2022-07-09 12:26:54,126 p=8877 u=vagrant n=ansible | ansible-playbook 2.9.27
+  config file = /home/vagrant/Ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Nov 16 2020, 22:23:17) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+2022-07-09 12:26:54,126 p=8877 u=vagrant n=ansible | Using /home/vagrant/Ansible/ansible.cfg as config file
+2022-07-09 12:26:54,384 p=8877 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/vagrant/Ansible/deploying_website.yaml': line 59, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+       enabled: yes
+      when: ansible_os_family == "RedHat"
+      ^ here
+
+2022-07-09 12:28:57,927 p=8887 u=vagrant n=ansible | ansible-playbook 2.9.27
+  config file = /home/vagrant/Ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Nov 16 2020, 22:23:17) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+2022-07-09 12:28:57,928 p=8887 u=vagrant n=ansible | Using /home/vagrant/Ansible/ansible.cfg as config file
+2022-07-09 12:28:58,502 p=8887 u=vagrant n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2022-07-09 12:28:58,503 p=8887 u=vagrant n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2022-07-09 12:28:58,503 p=8887 u=vagrant n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2022-07-09 12:28:58,503 p=8887 u=vagrant n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2022-07-09 12:28:58,503 p=8887 u=vagrant n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2022-07-09 12:28:58,503 p=8887 u=vagrant n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2022-07-09 12:28:58,504 p=8887 u=vagrant n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2022-07-09 12:28:58,504 p=8887 u=vagrant n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2022-07-09 12:28:58,505 p=8887 u=vagrant n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2022-07-09 12:28:58,506 p=8887 u=vagrant n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2022-07-09 12:28:58,506 p=8887 u=vagrant n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2022-07-09 12:28:58,506 p=8887 u=vagrant n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2022-07-09 12:28:58,506 p=8887 u=vagrant n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2022-07-09 12:28:58,511 p=8887 u=vagrant n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2022-07-09 12:28:58,512 p=8887 u=vagrant n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2022-07-09 12:28:58,512 p=8887 u=vagrant n=ansible | PLAYBOOK: deploying_website.yaml ******************************************************************************************
+2022-07-09 12:28:58,512 p=8887 u=vagrant n=ansible | 3 plays in deploying_website.yaml
+2022-07-09 12:28:58,520 p=8887 u=vagrant n=ansible | PLAY [Install OS updates for all 4 servers] *******************************************************************************
+2022-07-09 12:28:58,540 p=8887 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:29:03,948 p=8887 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:29:04,903 p=8887 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:29:05,015 p=8887 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:29:05,374 p=8887 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:29:05,389 p=8887 u=vagrant n=ansible | TASK [Install updates (CentOS)] *******************************************************************************************
+2022-07-09 12:29:05,773 p=8887 u=vagrant n=ansible | skipping: [Node4] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:10,986 p=8887 u=vagrant n=ansible | ok: [Node1] => {"changed": false, "msg": "Cache updated", "rc": 0, "results": []}
+2022-07-09 12:29:11,198 p=8887 u=vagrant n=ansible | ok: [Node2] => {"changed": false, "msg": "Cache updated", "rc": 0, "results": []}
+2022-07-09 12:29:11,612 p=8887 u=vagrant n=ansible | ok: [Node3] => {"changed": false, "msg": "Cache updated", "rc": 0, "results": []}
+2022-07-09 12:29:11,626 p=8887 u=vagrant n=ansible | TASK [Install updates (Ubuntu)] *******************************************************************************************
+2022-07-09 12:29:11,862 p=8887 u=vagrant n=ansible | skipping: [Node1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:11,905 p=8887 u=vagrant n=ansible | skipping: [Node2] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:11,985 p=8887 u=vagrant n=ansible | skipping: [Node3] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:20,898 p=8887 u=vagrant n=ansible | ok: [Node4] => {"changed": false, "msg": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nCalculating upgrade...\n0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n", "stderr": "", "stderr_lines": [], "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nCalculating upgrade...\n0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n", "stdout_lines": ["Reading package lists...", "Building dependency tree...", "Reading state information...", "Calculating upgrade...", "0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded."]}
+2022-07-09 12:29:20,900 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:29:20,902 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:29:20,904 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:29:20,910 p=8887 u=vagrant n=ansible | PLAY [Provisioning group1 as Web-Servers] *********************************************************************************
+2022-07-09 12:29:20,933 p=8887 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:29:23,132 p=8887 u=vagrant n=ansible | ok: [Node2]
+2022-07-09 12:29:23,294 p=8887 u=vagrant n=ansible | ok: [Node1]
+2022-07-09 12:29:23,640 p=8887 u=vagrant n=ansible | ok: [Node4]
+2022-07-09 12:29:23,641 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:29:23,658 p=8887 u=vagrant n=ansible | TASK [Install httpd package on Node1, 2 & 4] ******************************************************************************
+2022-07-09 12:29:23,971 p=8887 u=vagrant n=ansible | skipping: [Node4] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:49,620 p=8887 u=vagrant n=ansible | ok: [Node1] => {"changed": false, "changes": {"installed": [], "updated": []}, "msg": "", "rc": 0, "results": ["All packages providing httpd are up to date", "All packages providing php are up to date", ""]}
+2022-07-09 12:29:50,775 p=8887 u=vagrant n=ansible | ok: [Node2] => {"changed": false, "changes": {"installed": [], "updated": []}, "msg": "", "rc": 0, "results": ["All packages providing httpd are up to date", "All packages providing php are up to date", ""]}
+2022-07-09 12:29:50,789 p=8887 u=vagrant n=ansible | TASK [Install apache2 service on Node4 (Ubuntu)] **************************************************************************
+2022-07-09 12:29:50,985 p=8887 u=vagrant n=ansible | skipping: [Node1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:51,029 p=8887 u=vagrant n=ansible | skipping: [Node2] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:29:52,985 p=8887 u=vagrant n=ansible | ok: [Node4] => {"cache_update_time": 1657369758, "cache_updated": false, "changed": false}
+2022-07-09 12:29:53,002 p=8887 u=vagrant n=ansible | TASK [Copy our html file from files/ to Web-Server's defaults] ************************************************************
+2022-07-09 12:29:55,271 p=8887 u=vagrant n=ansible | ok: [Node4] => {"changed": false, "checksum": "d7bf14742699b6c720988cba4c37210f9570a5c2", "dest": "/var/www/html/index.html", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/var/www/html/index.html", "size": 220, "state": "file", "uid": 0}
+2022-07-09 12:29:58,120 p=8887 u=vagrant n=ansible | ok: [Node2] => {"changed": false, "checksum": "d7bf14742699b6c720988cba4c37210f9570a5c2", "dest": "/var/www/html/index.html", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/var/www/html/index.html", "secontext": "system_u:object_r:httpd_sys_content_t:s0", "size": 220, "state": "file", "uid": 0}
+2022-07-09 12:29:58,138 p=8887 u=vagrant n=ansible | ok: [Node1] => {"changed": false, "checksum": "d7bf14742699b6c720988cba4c37210f9570a5c2", "dest": "/var/www/html/index.html", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/var/www/html/index.html", "secontext": "system_u:object_r:httpd_sys_content_t:s0", "size": 220, "state": "file", "uid": 0}
+2022-07-09 12:29:58,156 p=8887 u=vagrant n=ansible | TASK [Start & enable httpd on Redhat] *************************************************************************************
+2022-07-09 12:29:58,462 p=8887 u=vagrant n=ansible | skipping: [Node4] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:30:03,578 p=8887 u=vagrant n=ansible | changed: [Node1] => {"changed": true, "enabled": true, "name": "httpd", "state": "started", "status": {"ActiveEnterTimestamp": "Sat 2022-07-09 12:10:44 UTC", "ActiveEnterTimestampMonotonic": "23823751107", "ActiveExitTimestampMonotonic": "0", "ActiveState": "active", "After": "remote-fs.target tmp.mount basic.target network.target nss-lookup.target system.slice systemd-journald.socket -.mount", "AllowIsolate": "no", "AmbientCapabilities": "0", "AssertResult": "yes", "AssertTimestamp": "Sat 2022-07-09 12:10:44 UTC", "AssertTimestampMonotonic": "23823426426", "Before": "shutdown.target", "BlockIOAccounting": "no", "BlockIOWeight": "18446744073709551615", "CPUAccounting": "no", "CPUQuotaPerSecUSec": "infinity", "CPUSchedulingPolicy": "0", "CPUSchedulingPriority": "0", "CPUSchedulingResetOnFork": "no", "CPUShares": "18446744073709551615", "CanIsolate": "no", "CanReload": "yes", "CanStart": "yes", "CanStop": "yes", "CapabilityBoundingSet": "18446744073709551615", "CollectMode": "inactive", "ConditionResult": "yes", "ConditionTimestamp": "Sat 2022-07-09 12:10:44 UTC", "ConditionTimestampMonotonic": "23823426426", "Conflicts": "shutdown.target", "ControlGroup": "/system.slice/httpd.service", "ControlPID": "0", "DefaultDependencies": "yes", "Delegate": "no", "Description": "The Apache HTTP Server", "DevicePolicy": "auto", "Documentation": "man:httpd(8) man:apachectl(8)", "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", "ExecMainCode": "0", "ExecMainExitTimestampMonotonic": "0", "ExecMainPID": "11888", "ExecMainStartTimestamp": "Sat 2022-07-09 12:10:44 UTC", "ExecMainStartTimestampMonotonic": "23823445686", "ExecMainStatus": "0", "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Sat 2022-07-09 12:10:44 UTC] ; stop_time=[n/a] ; pid=11888 ; code=(null) ; status=0/0 }", "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "FailureAction": "none", "FileDescriptorStoreMax": "0", "FragmentPath": "/usr/lib/systemd/system/httpd.service", "GuessMainPID": "yes", "IOScheduling": "0", "Id": "httpd.service", "IgnoreOnIsolate": "no", "IgnoreOnSnapshot": "no", "IgnoreSIGPIPE": "yes", "InactiveEnterTimestampMonotonic": "0", "InactiveExitTimestamp": "Sat 2022-07-09 12:10:44 UTC", "InactiveExitTimestampMonotonic": "23823446520", "JobTimeoutAction": "none", "JobTimeoutUSec": "0", "KillMode": "control-group", "KillSignal": "18", "LimitAS": "18446744073709551615", "LimitCORE": "18446744073709551615", "LimitCPU": "18446744073709551615", "LimitDATA": "18446744073709551615", "LimitFSIZE": "18446744073709551615", "LimitLOCKS": "18446744073709551615", "LimitMEMLOCK": "65536", "LimitMSGQUEUE": "819200", "LimitNICE": "0", "LimitNOFILE": "4096", "LimitNPROC": "1857", "LimitRSS": "18446744073709551615", "LimitRTPRIO": "0", "LimitRTTIME": "18446744073709551615", "LimitSIGPENDING": "1857", "LimitSTACK": "18446744073709551615", "LoadState": "loaded", "MainPID": "11888", "MemoryAccounting": "no", "MemoryCurrent": "18446744073709551615", "MemoryLimit": "18446744073709551615", "MountFlags": "0", "Names": "httpd.service", "NeedDaemonReload": "no", "Nice": "0", "NoNewPrivileges": "no", "NonBlocking": "no", "NotifyAccess": "main", "OOMScoreAdjust": "0", "OnFailureJobMode": "replace", "PermissionsStartOnly": "no", "PrivateDevices": "no", "PrivateNetwork": "no", "PrivateTmp": "yes", "ProtectHome": "no", "ProtectSystem": "no", "RefuseManualStart": "no", "RefuseManualStop": "no", "RemainAfterExit": "no", "Requires": "basic.target system.slice -.mount", "RequiresMountsFor": "/var/tmp", "Restart": "no", "RestartUSec": "100ms", "Result": "success", "RootDirectoryStartOnly": "no", "RuntimeDirectoryMode": "0755", "SameProcessGroup": "no", "SecureBits": "0", "SendSIGHUP": "no", "SendSIGKILL": "yes", "Slice": "system.slice", "StandardError": "inherit", "StandardInput": "null", "StandardOutput": "journal", "StartLimitAction": "none", "StartLimitBurst": "5", "StartLimitInterval": "10000000", "StartupBlockIOWeight": "18446744073709551615", "StartupCPUShares": "18446744073709551615", "StatusErrno": "0", "StatusText": "Total requests: 1; Current requests/sec: 0; Current traffic:   0 B/sec", "StopWhenUnneeded": "no", "SubState": "running", "SyslogLevelPrefix": "yes", "SyslogPriority": "30", "SystemCallErrorNumber": "0", "TTYReset": "no", "TTYVHangup": "no", "TTYVTDisallocate": "no", "TasksAccounting": "no", "TasksCurrent": "18446744073709551615", "TasksMax": "18446744073709551615", "TimeoutStartUSec": "1min 30s", "TimeoutStopUSec": "1min 30s", "TimerSlackNSec": "50000", "Transient": "no", "Type": "notify", "UMask": "0022", "UnitFilePreset": "disabled", "UnitFileState": "disabled", "WatchdogTimestamp": "Sat 2022-07-09 12:10:44 UTC", "WatchdogTimestampMonotonic": "23823751051", "WatchdogUSec": "0"}}
+2022-07-09 12:30:03,939 p=8887 u=vagrant n=ansible | changed: [Node2] => {"changed": true, "enabled": true, "name": "httpd", "state": "started", "status": {"ActiveEnterTimestamp": "Sat 2022-07-09 12:10:52 UTC", "ActiveEnterTimestampMonotonic": "23786074573", "ActiveExitTimestampMonotonic": "0", "ActiveState": "active", "After": "tmp.mount system.slice -.mount systemd-journald.socket network.target nss-lookup.target remote-fs.target basic.target", "AllowIsolate": "no", "AmbientCapabilities": "0", "AssertResult": "yes", "AssertTimestamp": "Sat 2022-07-09 12:10:52 UTC", "AssertTimestampMonotonic": "23785785759", "Before": "shutdown.target", "BlockIOAccounting": "no", "BlockIOWeight": "18446744073709551615", "CPUAccounting": "no", "CPUQuotaPerSecUSec": "infinity", "CPUSchedulingPolicy": "0", "CPUSchedulingPriority": "0", "CPUSchedulingResetOnFork": "no", "CPUShares": "18446744073709551615", "CanIsolate": "no", "CanReload": "yes", "CanStart": "yes", "CanStop": "yes", "CapabilityBoundingSet": "18446744073709551615", "CollectMode": "inactive", "ConditionResult": "yes", "ConditionTimestamp": "Sat 2022-07-09 12:10:52 UTC", "ConditionTimestampMonotonic": "23785785759", "Conflicts": "shutdown.target", "ControlGroup": "/system.slice/httpd.service", "ControlPID": "0", "DefaultDependencies": "yes", "Delegate": "no", "Description": "The Apache HTTP Server", "DevicePolicy": "auto", "Documentation": "man:httpd(8) man:apachectl(8)", "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", "ExecMainCode": "0", "ExecMainExitTimestampMonotonic": "0", "ExecMainPID": "11863", "ExecMainStartTimestamp": "Sat 2022-07-09 12:10:52 UTC", "ExecMainStartTimestampMonotonic": "23785788044", "ExecMainStatus": "0", "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Sat 2022-07-09 12:10:52 UTC] ; stop_time=[n/a] ; pid=11863 ; code=(null) ; status=0/0 }", "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "FailureAction": "none", "FileDescriptorStoreMax": "0", "FragmentPath": "/usr/lib/systemd/system/httpd.service", "GuessMainPID": "yes", "IOScheduling": "0", "Id": "httpd.service", "IgnoreOnIsolate": "no", "IgnoreOnSnapshot": "no", "IgnoreSIGPIPE": "yes", "InactiveEnterTimestampMonotonic": "0", "InactiveExitTimestamp": "Sat 2022-07-09 12:10:52 UTC", "InactiveExitTimestampMonotonic": "23785788150", "JobTimeoutAction": "none", "JobTimeoutUSec": "0", "KillMode": "control-group", "KillSignal": "18", "LimitAS": "18446744073709551615", "LimitCORE": "18446744073709551615", "LimitCPU": "18446744073709551615", "LimitDATA": "18446744073709551615", "LimitFSIZE": "18446744073709551615", "LimitLOCKS": "18446744073709551615", "LimitMEMLOCK": "65536", "LimitMSGQUEUE": "819200", "LimitNICE": "0", "LimitNOFILE": "4096", "LimitNPROC": "1857", "LimitRSS": "18446744073709551615", "LimitRTPRIO": "0", "LimitRTTIME": "18446744073709551615", "LimitSIGPENDING": "1857", "LimitSTACK": "18446744073709551615", "LoadState": "loaded", "MainPID": "11863", "MemoryAccounting": "no", "MemoryCurrent": "18446744073709551615", "MemoryLimit": "18446744073709551615", "MountFlags": "0", "Names": "httpd.service", "NeedDaemonReload": "no", "Nice": "0", "NoNewPrivileges": "no", "NonBlocking": "no", "NotifyAccess": "main", "OOMScoreAdjust": "0", "OnFailureJobMode": "replace", "PermissionsStartOnly": "no", "PrivateDevices": "no", "PrivateNetwork": "no", "PrivateTmp": "yes", "ProtectHome": "no", "ProtectSystem": "no", "RefuseManualStart": "no", "RefuseManualStop": "no", "RemainAfterExit": "no", "Requires": "-.mount system.slice basic.target", "RequiresMountsFor": "/var/tmp", "Restart": "no", "RestartUSec": "100ms", "Result": "success", "RootDirectoryStartOnly": "no", "RuntimeDirectoryMode": "0755", "SameProcessGroup": "no", "SecureBits": "0", "SendSIGHUP": "no", "SendSIGKILL": "yes", "Slice": "system.slice", "StandardError": "inherit", "StandardInput": "null", "StandardOutput": "journal", "StartLimitAction": "none", "StartLimitBurst": "5", "StartLimitInterval": "10000000", "StartupBlockIOWeight": "18446744073709551615", "StartupCPUShares": "18446744073709551615", "StatusErrno": "0", "StatusText": "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec", "StopWhenUnneeded": "no", "SubState": "running", "SyslogLevelPrefix": "yes", "SyslogPriority": "30", "SystemCallErrorNumber": "0", "TTYReset": "no", "TTYVHangup": "no", "TTYVTDisallocate": "no", "TasksAccounting": "no", "TasksCurrent": "18446744073709551615", "TasksMax": "18446744073709551615", "TimeoutStartUSec": "1min 30s", "TimeoutStopUSec": "1min 30s", "TimerSlackNSec": "50000", "Transient": "no", "Type": "notify", "UMask": "0022", "UnitFilePreset": "disabled", "UnitFileState": "disabled", "WatchdogTimestamp": "Sat 2022-07-09 12:10:52 UTC", "WatchdogTimestampMonotonic": "23786074247", "WatchdogUSec": "0"}}
+2022-07-09 12:30:03,941 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:30:03,941 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:30:03,946 p=8887 u=vagrant n=ansible | PLAY [Provisioning group2 as db-Server] ***********************************************************************************
+2022-07-09 12:30:03,969 p=8887 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2022-07-09 12:30:06,645 p=8887 u=vagrant n=ansible | ok: [Node3]
+2022-07-09 12:30:06,646 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:30:06,661 p=8887 u=vagrant n=ansible | TASK [Install mariadb server package in Node3 (CentOS)] *******************************************************************
+2022-07-09 12:30:26,796 p=8887 u=vagrant n=ansible | ok: [Node3] => {"changed": false, "changes": {"installed": [], "updated": []}, "msg": "", "rc": 0, "results": ["All packages providing mariadb are up to date", ""]}
+2022-07-09 12:30:26,812 p=8887 u=vagrant n=ansible | TASK [Install mariadb server] *********************************************************************************************
+2022-07-09 12:30:26,913 p=8887 u=vagrant n=ansible | skipping: [Node3] => {"changed": false, "skip_reason": "Conditional result was False"}
+2022-07-09 12:30:26,914 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:30:26,915 p=8887 u=vagrant n=ansible | META: ran handlers
+2022-07-09 12:30:26,917 p=8887 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************
+2022-07-09 12:30:26,918 p=8887 u=vagrant n=ansible | Node1                      : ok=6    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:30:26,918 p=8887 u=vagrant n=ansible | Node2                      : ok=6    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:30:26,918 p=8887 u=vagrant n=ansible | Node3                      : ok=4    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2022-07-09 12:30:26,919 p=8887 u=vagrant n=ansible | Node4                      : ok=5    changed=0    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
