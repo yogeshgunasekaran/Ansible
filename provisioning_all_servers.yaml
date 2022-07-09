@@ -69,13 +69,18 @@
         src: templates/ntp_redhat.conf.j2
         dest: /etc/ntp.conf
       when: ansible_os_family == "RedHat"
+      notify:
+        - Restart NTP on Redhat
 
     - name: Deploy updated NTP conf file for Debian servers
       template:
         src: templates/ntp_debian.conf.j2
         dest: /etc/ntp.conf
       when: ansible_os_family == "Debian"
-
+      notify:
+        - Restart NTP on Debian
+        
+  handlers:
     - name: Restart NTP on Redhat
       service:
         name: ntpd
