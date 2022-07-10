@@ -1,0 +1,36 @@
+
+---
+- name: Generate and setup AWS keypair and EC2 instance
+  hosts: localhost
+  tasks:
+    - name: Create a new EC2 public-key in AWS
+      ec2_key:
+        name: ansiblekey
+        region: us-east-2
+      register: printkey
+
+  # - name: Display the private key
+  #   debug: 
+  #   var: printkey
+ 
+    - name: Save the private-key locally 
+      copy:
+        content: "{{printkey.key.private_key}}"
+        dest: ./ansiblekey.pem
+      when: printkey.changed
+
+    - name: Create one EC2 instance in AWS with specified tags
+      ec2:
+        key_name: ansiblekey
+        instance_type: t2.micro
+        image: ami-016b213e65284e9c9
+        wait: yes
+        instance_tags:
+          Name: ansible-web-server
+          project: ansible-testing
+        exact_count: 1
+        count_tag:
+          Name: ansible-web-server
+          project: ansible-testing
+        region: us-east-2
+
