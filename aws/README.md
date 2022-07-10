@@ -28,6 +28,7 @@
    ```sh 
   pip install boto boto3 
   ````
+  - Create and run the ansible-playbook 
 
    
 
