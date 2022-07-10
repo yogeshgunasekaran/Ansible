@@ -24,6 +24,7 @@
         key_name: ansiblekey
         instance_type: t2.micro
         image: ami-016b213e65284e9c9
+        region: us-east-2
         wait: yes
         instance_tags:
           Name: ansible-web-server
@@ -32,5 +33,5 @@
         count_tag:
           Name: ansible-web-server
           project: ansible-testing
-        region: us-east-2
+        
 
