@@ -21,4 +21,13 @@
    ```sh 
   source .bashrc 
   ````
+  - Install dependencies in the control machine
+  ```sh 
+  sudo apt install python-pip -y 
+  ````
+   ```sh 
+  pip install boto boto3 
+  ````
+
+   
 
