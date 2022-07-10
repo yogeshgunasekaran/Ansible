@@ -23,7 +23,7 @@
   ````
   - Install dependencies in the control machine
   ```sh 
-  sudo apt install python-pip -y 
+  sudo apt install python3-pip -y 
   ````
    ```sh 
   pip install boto boto3 
